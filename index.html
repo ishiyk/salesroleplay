@@ -2,10 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ドキュメント</title>
+  <title>限定公開ドキュメント</title>
+  <script>
+    const password = prompt("パスワードを入力してください:");
+    if (password !== "Password123!") { // 設定したいパスワード
+      alert("パスワードが違います。");
+      window.location.href = "about:blank";
+    }
+  </script>
 </head>
 <body>
-  <h1>ドキュメント公開ページ</h1>
-  <p>ここにドキュメントの内容を記述します。</p>
+  <h1>限定公開ドキュメント</h1>
+  <p>ここに閲覧を制限したい内容を記述します。</p>
 </body>
 </html>
