@@ -113,4 +113,24 @@
       const msgBuffer = new TextEncoder().encode(text);
       const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
-      return hashArray.map(b => b 
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function handleAuth(event) {
+      event.preventDefault();
+      const input = document.getElementById('password-input').value;
+      const inputHash = await sha256(input);
+
+      if (inputHash === TARGET_HASH) {
+        // 認証成功：モーダルを非表示にし、コンテンツを表示
+        document.getElementById('auth-overlay').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+      } else {
+        // 認証失敗
+        document.getElementById('error-msg').style.display = 'block';
+        document.getElementById('password-input').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
