@@ -95,13 +95,544 @@
   </div>
 
   <!-- 閲覧を制限したいメインコンテンツ -->
-  <main id="protected-content">
-    <h1>限定公開ドキュメント</h1>
-    <p>認証に成功したユーザーのみがこの本文を閲覧できます。</p>
-    <hr>
-    <h2>プロジェクト概要</h2>
-    <p>ここに詳細なドキュメント内容を記載します。</p>
-  </main>
+<main id="protected-content">
+  <style>
+    /* Scoped styling for protected-content */
+    #protected-content {
+      font-family: "Meiryo", "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-size: 9pt;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #f8f9fa;
+      padding: 24px;
+      margin: 0 auto;
+      max-width: 1080px;
+    }
+    #protected-content * {
+      box-sizing: border-box;
+    }
+
+    /* Cover / Hero Header */
+    .shiori-cover {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+      border: 2px solid #0076ce;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 118, 206, 0.08);
+    }
+    .shiori-tag {
+      display: inline-block;
+      background-color: #e36414;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 8.5pt;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .shiori-title {
+      font-size: 26pt;
+      font-weight: bold;
+      color: #0076ce;
+      margin: 4px 0;
+      letter-spacing: 2px;
+    }
+    .shiori-sub {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 16px;
+    }
+    .shiori-image {
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+    }
+    .shiori-meta {
+      display: inline-flex;
+      gap: 20px;
+      background: #ffffff;
+      padding: 8px 24px;
+      border-radius: 30px;
+      border: 1px dashed #0076ce;
+      font-size: 9pt;
+      font-weight: bold;
+    }
+
+    /* TOC Nav Buttons */
+    .toc-container {
+      background: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .toc-title {
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #0076ce;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .toc-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .toc-btn {
+      background-color: #f0f7ff;
+      border: 1px solid #b8daff;
+      color: #0076ce;
+      padding: 5px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 8.5pt;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .toc-btn:hover {
+      background-color: #0076ce;
+      color: #ffffff;
+      border-color: #0076ce;
+      transform: translateY(-1px);
+    }
+
+    /* Section Cards */
+    .content-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .section-heading {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #0076ce;
+      border-left: 4px solid #0076ce;
+      padding-left: 10px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sub-heading {
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #0a2f64;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    /* Highlight Callouts */
+    .callout-box {
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 8.5pt;
+    }
+    .callout-philosophy {
+      background-color: #eaf7ed;
+      border-left: 4px solid #28a745;
+      color: #155724;
+    }
+    .callout-ai {
+      background-color: #fff4ec;
+      border-left: 4px solid #e36414;
+      color: #8a3b00;
+    }
+
+    /* Compact Tables */
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 14px 0;
+      font-size: 8.5pt;
+      background: #ffffff;
+    }
+    .custom-table th {
+      background-color: #0076ce;
+      color: #ffffff;
+      font-weight: bold;
+      text-align: left;
+      padding: 6px 10px;
+      border: 1px solid #0060a9;
+    }
+    .custom-table td {
+      padding: 6px 10px;
+      border: 1px solid #dee2e6;
+      vertical-align: top;
+    }
+    .custom-table tr:nth-child(even) {
+      background-color: #fbfcfe;
+    }
+    .badge-mark {
+      display: inline-block;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .badge-good { background: #d4edda; color: #155724; }
+    .badge-mid  { background: #fff3cd; color: #856404; }
+    .badge-bad  { background: #f8d7da; color: #721c24; }
+
+    /* Top Jump Link */
+    .jump-top {
+      font-size: 8pt;
+      color: #6c757d;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .jump-top:hover {
+      color: #0076ce;
+      text-decoration: underline;
+    }
+
+    /* Memo Area */
+    .memo-area {
+      width: 100%;
+      height: 65px;
+      border: 1px dashed #ced4da;
+      border-radius: 4px;
+      background: #fafafa;
+      padding: 8px;
+      font-size: 8.5pt;
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <!-- 1. COVER HERO -->
+  <div class="shiori-cover" id="sec-cover">
+    <div class="shiori-tag">★ 丸紅情報・若手営業技術 提案力強化ワークショップ ★</div>
+    <div class="shiori-title">旅 の し お り</div>
+    <div class="shiori-sub">〜 顧客ファーストで挑む仮想化基盤移行クエスト ＆ デマジェン大作戦 〜</div>
+    <div>
+      <img 
+        src="https://glean.saleschataws-apis.dell.com/api/v1/downloadchatfile/670a10dab49f48f38b83074c28fdf636" 
+        alt="旅のしおり かわいい挿絵" 
+        class="shiori-image"
+      />
+    </div>
+    <div class="shiori-meta">
+      <span>【 なまえ 】 ＿＿＿＿＿＿＿＿＿＿</span>
+      <span>【 班 】 ＿＿＿＿＿ 班</span>
+    </div>
+  </div>
+
+  <!-- 2. QUICK NAVIGATION (TOC BUTTONS) -->
+  <div class="toc-container">
+    <div class="toc-title">
+      <span>🧭 クイック目次ナビゲーション（クリックして各項目へジャンプ）</span>
+    </div>
+    <div class="toc-buttons">
+      <a href="#sec-intro" class="toc-btn">1. 心得とミッション</a>
+      <a href="#sec-schedule" class="toc-btn">2. タイムテーブル</a>
+      <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・AI</a>
+      <a href="#sec-products" class="toc-btn">4. 製品図鑑（仲間たち）</a>
+      <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク</a>
+      <a href="#sec-roleplay" class="toc-btn">6. ロープレ対決（お題）</a>
+      <a href="#sec-quiz" class="toc-btn">7. Forms 小テスト</a>
+      <a href="#sec-demagen" class="toc-btn">8. デマジェン大作戦</a>
+      <a href="#sec-memo" class="toc-btn">9. 振り返りシート</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: INTRODUCTION & PHILOSOPHY -->
+  <div class="content-card" id="sec-intro">
+    <div class="section-heading">
+      <span>1. はじめに 〜 本日のミッションと提案の心得 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <p>丸紅I-DIGIO／丸紅システムズの皆さん、本日のワークショップへようこそ！前回のストレージ勉強会（満足度4.77）を踏まえ、今回は「現場で案件を発掘し、顧客に最適な提案を組み立てる実践力」を鍛えるプログラムです。</p>
+
+    <div class="callout-box callout-philosophy">
+      <strong>◆ 提案の基本姿勢：『お客様にとってのベストな選択肢を第一に考える』</strong><br>
+      製品ありきの売り込みではなく、顧客の既存資産・運用課題・将来計画に真摯に寄り添い、客観的かつ論理的な比較提案を行います。徹底的に比較検討した結果、仮に「今回はNetAppを継続・増設することがお客様にとって最善」という結論に至った場合も正解です。顧客の利益を最優先にする誠実なコンサルティング姿勢こそが、長期的な信頼関係の基盤となります。
+    </div>
+
+    <div class="callout-box callout-ai">
+      <strong>◆ AI（SalesChat / 生成AI）も活用して素早く調べよう！</strong><br>
+      知識を暗記している必要はありません。ワークショップ中や調べものの最中、競合機能の用語や技術仕様に迷ったら、社内ポータルに加えてAIアシスタントをフル活用してリサーチし、提案の引き出しを増やしましょう。
+    </div>
+  </div>
+
+  <!-- SECTION 2: SCHEDULE -->
+  <div class="content-card" id="sec-schedule">
+    <div class="section-heading">
+      <span>2. 一日のながれ（タイムスケジュール）</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">時間</th>
+          <th style="width: 32%;">プログラム・セッション</th>
+          <th style="width: 50%;">内容・達成ゴール</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>10:00 - 10:15</td><td>オープニング</td><td>趣旨説明・チーム分け・顧客ファーストの心得共有</td></tr>
+        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>4大ポータル（羅針盤/ナレッジ/サポート/コミュニティ）＆ AI検索演習</td></tr>
+        <tr><td>11:00 - 12:15</td><td>【座学②】サイジング＆見積ドリル</td><td>PowerSizer（仮想環境・DRR試算）＆ DSC（BOM作成・構成）ハンズオン</td></tr>
+        <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
+        <tr><td>13:15 - 14:15</td><td>【ワークショップ】〇×比較表づくり</td><td>顧客目線での「NetApp vs Dell 〇×比較表」作成（AI・ポータルフル活用）</td></tr>
+        <tr><td>14:15 - 14:25</td><td>休憩・ロープレ準備</td><td>作成した〇×表とPowerSizer構成を提案資料としてセット</td></tr>
+        <tr><td>14:25 - 15:45</td><td>【ロールプレイ大会】実戦提案バトル</td><td>VMware基盤（NetApp NFS 3Tier / OS詳細未把握）顧客役への対抗提案実演</td></tr>
+        <tr><td>15:45 - 16:15</td><td>【講評・フィードバック】</td><td>講師・メンターからの即時レビュー、Live Optics誘導の模範トーク解説</td></tr>
+        <tr><td>16:15 - 16:45</td><td>【Microsoft Forms 小テスト】</td><td>全方位オープンブック型テスト（ポータル・PowerSizer・AI何でも検索OK！）</td></tr>
+        <tr><td>16:45 - 17:10</td><td>【デマジェン大作戦】成果物統合</td><td>〇×表のマージ＆ダウンロード資料化、明日からの案件創出アクション宣言</td></tr>
+        <tr><td>17:10 - 17:20</td><td>表彰式・エンディング</td><td>小テスト＆ロープレ優秀チーム表彰、記念撮影</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: TOOLS & PORTALS -->
+  <div class="content-card" id="sec-tools">
+    <div class="section-heading">
+      <span>3. 冒険の装備と情報源 〜 ポータル・サイジング・AI活用 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">情報源 / ツール</th>
+          <th style="width: 35%;">入手できる情報・機能</th>
+          <th style="width: 40%;">実践での活用シーン</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>パートナー羅針盤</strong><br>(Partner Portal)</td>
+          <td>キャンペーン情報、特別価格施策、競合比較バトルカード、提案書スライド部品</td>
+          <td>提案書の骨子作成、最新プロモーション確認、営業向けキラーメッセージ入手。</td>
+        </tr>
+        <tr>
+          <td><strong>ナレッジセンター</strong><br>(Info Hub / KB)</td>
+          <td>製品ホワイトペーパー、サイジングガイド、ベストプラクティス、他社移行検証レポート</td>
+          <td>技術的裏付け、NetAppからの移行検証データ、構成推奨値の調査。</td>
+        </tr>
+        <tr>
+          <td><strong>サポートサイト</strong><br>(E-Lab Navigator)</td>
+          <td>接続互換性マトリクス（OS/HBA/スイッチ）、製品仕様書、EOL/EOS情報</td>
+          <td>現行環境とDell製品の接続互換性確認、リプレイス妥当性の検証。</td>
+        </tr>
+        <tr>
+          <td><strong>コミュニティサイト</strong><br>(Dell Community)</td>
+          <td>現場トラブルシュート事例、Q&A、API/スクリプト活用ノウハウ</td>
+          <td>現場SEならではの設定ノウハウやリアルな運用のTips調査。</td>
+        </tr>
+        <tr>
+          <td><strong>AI アシスタント</strong><br>(SalesChat / 生成AI)</td>
+          <td>仕様要約、競合機能解説、比較表アイデア出し、メール・提案骨子の壁打ち</td>
+          <td>「このNetApp機能の違いは？」「Win/Linux混在時の注意点」等の即時リサーチ。</td>
+        </tr>
+        <tr>
+          <td><strong>PowerSizer ＆ DSC</strong></td>
+          <td>PowerSizer（仮想環境サイジング・DRR試算） ＆ DSC（BOM見積作成）</td>
+          <td>顧客要件から最適モデルを科学的に選定し、Anytime Upgrade等の必須オプションを構成。</td>
+        </tr>
+        <tr>
+          <td><strong>Live Optics</strong> (秘密兵器)</td>
+          <td>無償・エージェントレスの稼働環境負荷アセスメントツール</td>
+          <td>顧客がVM詳細を把握できていない際、実効容量・IOPS・OS内訳を安全に可視化。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4: PRODUCTS -->
+  <div class="content-card" id="sec-products">
+    <div class="section-heading">
+      <span>4. 登場する頼れる仲間たち 〜 Dell製品ポートフォリオ図鑑 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <p>どのような製品を選び、どう組み合わせるかは<strong>【各チームの自由】</strong>です！顧客にとってベストなアーキテクチャを自由に組み立ててください。</p>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">カテゴリ / 製品名</th>
+          <th style="width: 38%;">製品の特徴・強み</th>
+          <th style="width: 37%;">提案での主な役割・組み合わせ例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>【サーバー】<br>PowerEdge</strong></td><td>業界シェアNo.1の高集約・高信頼サーバー。iDRACによる高度な運用自動化。</td><td>3Tier構成の仮想化コンピュート基盤として外付けストレージと連携。</td></tr>
+        <tr><td><strong>【プライマリストレージ】<br>PowerStore</strong></td><td>NVMeネイティブ、常時4:1データ削減保証、Anytime Upgrade（無停止刷新）。</td><td>仮想化基盤の本命。NetApp AFF/FASからの移行で性能・運用・TCOを大幅改善。</td></tr>
+        <tr><td><strong>【プライマリストレージ】<br>PowerVault ME5</strong></td><td>圧倒的低価格・シンプルな専用SAN/DASストレージ。簡単セットアップ。</td><td>コスト最優先、バックアップ専用ターゲット、エントリー仮想基盤の最適解。</td></tr>
+        <tr><td><strong>【プライマリストレージ】<br>Unity XT</strong></td><td>実績多数のエンタープライズ・ユニファイド（SAN/NAS）。堅牢性とコストの両立。</td><td>中規模環境でファイル共有と仮想基盤を柔軟に統合する受け皿。</td></tr>
+        <tr><td><strong>【重複排除ストレージ】<br>Data Domain (PowerProtect DD)</strong></td><td>業界標準の超高効率重複排除（平均65:1）。堅牢なデータ保護・イミュータブル保管。</td><td>仮想環境のバックアップ先として統合し、保存容量とネットワーク負荷を激減。</td></tr>
+        <tr><td><strong>【データ保護ソフト】<br>PowerProtect Data Manager (PPDM)</strong></td><td>次世代VMware保護（Transparent SnapshotsによるVM無停止保護）。K8s対応。</td><td>仮想マシンに一切負荷をかけずに高速・安全なバックアップ運用を実現。</td></tr>
+        <tr><td><strong>【SaaSバックアップ】<br>PowerProtect Backup Services (PPBS)</strong></td><td>クラウドネイティブ（SaaS）バックアップ。インフラ構築不要で即時利用可能。</td><td>M365、エンドポイント、クラウド上のワークロードを一元バックアップ。</td></tr>
+        <tr><td><strong>【統合管理】<br>DDPC / DPC</strong></td><td>Data Domain Management Center (DDPC) ＆ Data Protection Central (DPC)。</td><td>複数拠点のData Domainやバックアップ環境の一元監視・容量可視化。</td></tr>
+        <tr><td><strong>【HCIアプライアンス】<br>AX / XC シリーズ</strong></td><td>AX: Microsoft Azure Stack HCI専用ノード<br>XC: Nutanix搭載アプライアンス</td><td>3TierからHCIへの刷新提案。運用シンプル化やハイブリッドクラウド連携。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5: WORKSHOP -->
+  <div class="content-card" id="sec-workshop">
+    <div class="section-heading">
+      <span>5. ワークショップ 〜 顧客目線の「NetApp対抗 〇×比較表」作成 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <p>顧客が稟議を通す際に『客観的に見てどちらが自社に合っているか』を判断できる〇×表を作成します。AIやポータルを検索しながら客観的な視点で埋めていきましょう。</p>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">評価項目（顧客の関心事）</th>
+          <th style="width: 15%;">現行 NetApp (NFS)</th>
+          <th style="width: 15%;">Dell 提案構成</th>
+          <th style="width: 45%;">顧客目線での解説・キラーメッセージ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>現状把握とサイジング</strong><br>（VM詳細が不明な状態）</td>
+          <td><span class="badge-mark badge-mid">△</span> 顧客任せ・高額化</td>
+          <td><span class="badge-mark badge-good">◎</span> Live Optics＋PowerSizer</td>
+          <td>「現状が見えなくても無償Live Opticsで精密診断し、過剰投資を防ぎます」</td>
+        </tr>
+        <tr>
+          <td><strong>データ削減効果</strong><br>（Win/Linux混在環境）</td>
+          <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・設定依存</td>
+          <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証</td>
+          <td>「OS混在環境でも契約で4:1削減を保証。容量不足のリスクを排除します」</td>
+        </tr>
+        <tr>
+          <td><strong>VMware運用性・接続方式</strong><br>（NFS運用の今後）</td>
+          <td><span class="badge-mark badge-mid">◯</span> NFS接続の継続</td>
+          <td><span class="badge-mark badge-good">◎</span> vVols / NVMe-oF / NFS</td>
+          <td>「NFS運用の良さを残しつつ、vVolsでVM単位のきめ細かい管理へ進化」</td>
+        </tr>
+        <tr>
+          <td><strong>バックアップ・データ保護</strong><br>（VMバックアップ負荷）</td>
+          <td><span class="badge-mark badge-mid">△</span> スナップショット依存</td>
+          <td><span class="badge-mark badge-good">◎</span> Data Domain ＋ PPDM</td>
+          <td>「Transparent SnapshotsによりVMを停止・低速化させずに確実保護」</td>
+        </tr>
+        <tr>
+          <td><strong>将来の更改・ライフサイクル</strong><br>（5年後のデータ移行）</td>
+          <td><span class="badge-mark badge-bad">×</span> 大規模移行PJ要</td>
+          <td><span class="badge-mark badge-good">◎</span> Anytime Upgrade</td>
+          <td>「次回更改は無停止コントローラ交換。データ移行の手間とコストをゼロに」</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 6: ROLEPLAY -->
+  <div class="content-card" id="sec-roleplay">
+    <div class="section-heading">
+      <span>6. ロールプレイ対決 〜 仮想環境移行クエスト 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+
+    <div class="sub-heading">■ 顧客カルテ（商談シナリオ）</div>
+    <div style="background: #fdfdfe; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 8.5pt; margin-bottom: 12px;">
+      <strong>【顧客プロファイル】</strong> 中堅製造業（情報システム部 インフラ担当課長 ＆ 主任）<br>
+      <strong>【現行システム】</strong> 物理サーバー数台 ＋ NetAppストレージ（3Tier構成、NFS接続）／ VMware vSphere（VM約60台、Win/SUSE Linux混在）<br>
+      <strong>【顧客のリアルな悩み・発言】</strong><br>
+      1. 「NetAppの保守が来年切れるが、担当者が異動して各VMの詳細（容量・負荷・OS）を把握できていない」<br>
+      2. 「ずっとNFSで使ってきたので、SANに変えると設計やデータ移行が大変そうで不安」<br>
+      3. 「WindowsとSUSE Linuxが混ざっているが、Dellに替えて容量やバックアップはどうなるのか？」<br>
+      4. 「3Tierを続けるべきか、HCIにするべきかも悩んでいる。NetApp継続の選択肢も含めてフラットに提案してほしい」
+    </div>
+
+    <div class="sub-heading">■ 審査ルーブリック（100点満点）</div>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">評価項目</th>
+          <th style="width: 15%;">配点</th>
+          <th style="width: 60%;">合格基準（顧客ファーストの提案ができているか）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>顧客ファーストの傾聴＆Live Optics誘導</strong></td><td>25点</td><td>「詳細不明」に対し、無理に売り込まず無償Live Optics診断を誠実に提案できたか。</td></tr>
+        <tr><td><strong>客観的な〇×比較表の活用</strong></td><td>25点</td><td>自作〇×表を提示し、NetAppの良さも認めつつ顧客メリットを論理的に説明できたか。</td></tr>
+        <tr><td><strong>製品構成の妥当性 (PowerSizer/DSC活用)</strong></td><td>25点</td><td>PowerStore/PowerEdge/Data Domain/HCI等を自由に組み合わせ、最適な理由を語れたか。</td></tr>
+        <tr><td><strong>営業・SEの連携＆クロージング</strong></td><td>25点</td><td>営業とSEの息が合い、顧客の不安を払拭して「Live Optics診断実施」の合意を得られたか。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 7: QUIZ -->
+  <div class="content-card" id="sec-quiz">
+    <div class="section-heading">
+      <span>7. 実践力腕試し！ Microsoft Forms 小テスト 〜 ツール・AI検索OK 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！ポータル（羅針盤/ナレッジ/サポート/コミュニティ）、PowerSizer、DSC、そしてAIツールを使って素早く答えを導き出してください。</p>
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th style="width: 25%;">出題カテゴリ</th>
+          <th style="width: 35%;">確認するスキル・論点</th>
+          <th style="width: 40%;">出題イメージ（例）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>情報ポータル活用力</strong><br>(羅針盤/ナレッジ/サポート)</td><td>適切なポータルから正確な公式情報を素早く見つけられるか</td><td>「NetAppからPowerStoreへのデータ移行手順書（WhitePaper）のタイトルを検索して答えよ」</td></tr>
+        <tr><td><strong>PowerSizer / DSC<br>実践サイジング力</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB・Win/Linux混在時、PowerStoreで4:1削減適用時の必要物理容量は？」</td></tr>
+        <tr><td><strong>製品選定＆NetApp対抗<br>（顧客ファースト）</strong></td><td>競合特徴とDell差別化ポイントを正しく理解しているか</td><td>「NetApp ONTAPのNFS運用に慣れた顧客に対し、PowerStoreで提案すべきプロトコルと移行利点は？」</td></tr>
+        <tr><td><strong>データ保護＆HCI<br>ポートフォリオ理解</strong></td><td>Data Domain/PPDMやHCIの使いどころを理解しているか</td><td>「VMware環境で仮想マシンに負荷をかけずにバックアップ可能なPPDMの機能名（〇〇 Snapshots）は？」</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 8: DEMAND GENERATION -->
+  <div class="content-card" id="sec-demagen">
+    <div class="section-heading">
+      <span>8. 冒険のあとのデマジェン大作戦 〜 成果物統合 ＆ 案件創出 〜</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <div style="font-size: 8.5pt;">
+      <p><strong>【成果物のホワイトペーパー化】</strong> 各チームが作成した〇×表をマージし、『【VMware×NetAppユーザー必読】仮想化基盤ストレージ移行・選定ガイド』としてPDFダウンロード資料を作成します。</p>
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; margin-top: 8px;">
+        <strong>◆ デマジェン実行ステップ（案件化ロードマップ）</strong>
+        <ol style="margin: 6px 0 0 16px; padding: 0;">
+          <li><strong>リード獲得：</strong> 丸紅情報様Webサイトおよび情シス向けメルマガで資料DL案内を展開。</li>
+          <li><strong>フォローコール：</strong> DL顧客へワークショップ受講者が架電（「Live Optics無償診断」のご案内）。</li>
+          <li><strong>最適提案：</strong> 実データをもとにPowerSizerでサイジング・DSCで見積提示。</li>
+          <li><strong>案件化：</strong> 3か月後KPI（3件以上の案件化）を達成！</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9: MEMO -->
+  <div class="content-card" id="sec-memo">
+    <div class="section-heading">
+      <span>9. メモ帳 ＆ 本日の振り返りシート</span>
+      <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+    <div style="font-size: 8.5pt;">
+      <div style="margin-bottom: 4px;"><strong>【本日の気づき・学んだこと（AI活用・顧客ファーストの視点など）】</strong></div>
+      <div class="memo-area">自由記入欄</div>
+
+      <div style="margin-bottom: 4px;"><strong>【明日から現場で実践するアクション（ターゲット顧客・アプローチ案）】</strong></div>
+      <div class="memo-area">自由記入欄</div>
+
+      <div style="margin-bottom: 4px;"><strong>【講師・メンターへの質問・メッセージ】</strong></div>
+      <div class="memo-area">自由記入欄</div>
+    </div>
+  </div>
+</main>
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
