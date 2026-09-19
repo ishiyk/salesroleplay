@@ -289,6 +289,16 @@
     .badge-good { background: #d4edda; color: #155724; }
     .badge-mid  { background: #fff3cd; color: #856404; }
     .badge-bad  { background: #f8d7da; color: #721c24; }
+    .badge-auth {
+      display: inline-block;
+      font-size: 7.5pt;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: normal;
+      background: #e9ecef;
+      color: #495057;
+      margin-top: 2px;
+    }
 
     /* Scenario Box */
     .scenario-card {
@@ -360,7 +370,7 @@
     <div class="toc-buttons">
       <a href="#sec-intro" class="toc-btn">1. 心得とミッション</a>
       <a href="#sec-schedule" class="toc-btn">2. タイムテーブル</a>
-      <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール</a>
+      <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール一覧</a>
       <a href="#sec-products" class="toc-btn">4. 主要8製品ポートフォリオ</a>
       <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク</a>
       <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ（ロープレ）</a>
@@ -405,7 +415,7 @@
       </thead>
       <tbody>
         <tr><td>10:00 - 10:15</td><td>オープニング</td><td>趣旨説明・チーム分け・顧客ファーストの心得共有</td></tr>
-        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>4大ポータル ＆ AI（ChatGPT/Gemini/Copilot）検索演習</td></tr>
+        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>Dell公式ポータル群（羅針盤・ナレッジ・サポート等）＆ AI検索演習</td></tr>
         <tr><td>11:00 - 12:15</td><td>【座学②】サイジング＆見積ドリル</td><td>PowerSizer（仮想環境・DRR試算）＆ DSC（BOM作成・構成）ハンズオン</td></tr>
         <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
         <tr><td>13:15 - 14:15</td><td>【ワークショップ】〇×比較表づくり</td><td>3つの顧客シナリオに合わせた「〇×比較表」作成（AI・ポータルフル活用）</td></tr>
@@ -419,69 +429,112 @@
     </table>
   </div>
 
-  <!-- SECTION 3: TOOLS & PORTALS -->
+  <!-- SECTION 3: TOOLS & PORTALS (Based on Dell Technologies no Arukikata) -->
   <div class="content-card" id="sec-tools">
     <div class="section-heading">
-      <span>3. 冒険の装備と情報源 〜 情報元とツールの使い分け 〜</span>
+      <span>3. 冒険の装備と情報源 〜 Dell Technologies 公式ポータル ＆ ツール一覧 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
+    <p style="font-size: 8.5pt; margin-top: 0;">『Dell Technologies の歩き方【サーバー・ストレージ編】』に準拠した、提案・調査・サイジングで駆使する主要リソース一覧です。</p>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 14%;">区分</th>
-          <th style="width: 24%;">情報元 / ツール名</th>
+          <th style="width: 15%;">区分</th>
+          <th style="width: 25%;">情報元 / ツール名</th>
           <th style="width: 32%;">入手できる情報・主な機能</th>
-          <th style="width: 30%;">実践での活用シーン</th>
+          <th style="width: 28%;">実践での活用シーン</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>情報ポータル</strong></td>
-          <td><strong>パートナー羅針盤</strong><br>(Partner Portal)</td>
-          <td>キャンペーン情報、特別価格施策、競合比較バトルカード、提案書スライド部品</td>
-          <td>提案書の骨子作成、最新プロモーション確認、営業向けキラーメッセージ入手。</td>
+          <td><strong>専用ポータル</strong></td>
+          <td><strong>パートナー ポータル</strong><br>(Partner Portal)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>パートナープログラム、案件登録、アカウント管理、各種ツールへのリンク集</td>
+          <td>商談の案件登録、特別価格申請、各専用ツールへのアクセス起点。</td>
         </tr>
         <tr>
-          <td><strong>情報ポータル</strong></td>
-          <td><strong>ナレッジセンター</strong><br>(Info Hub / KB)</td>
-          <td>製品ホワイトペーパー、サイジングガイド、ベストプラクティス、他社移行検証レポート</td>
-          <td>技術的裏付け、NetAppからの移行検証データ、構成推奨値の調査。</td>
+          <td><strong>技術ポータル</strong></td>
+          <td><strong>パートナー技術羅針盤</strong><br>(Partner Tech Compass)<br><span class="badge-auth">個別登録</span></td>
+          <td>HEROES、徹底攻略塾、Tech Portalを統合したSE向け技術ハブ</td>
+          <td>最新の技術セミナー資料、勉強会アーカイブ、技術アップデート確認。</td>
         </tr>
         <tr>
-          <td><strong>情報ポータル</strong></td>
-          <td><strong>サポートサイト</strong><br>(Dell Support)</td>
-          <td>サービスタグ番号による個別機器情報検索、リリースノート、管理者ガイド、ファームウェア</td>
-          <td>既設機器の仕様確認、トラブルシューティング、正確な管理者マニュアルの取得。</td>
+          <td><strong>提案・競合</strong></td>
+          <td><strong>ナレッジ センター</strong><br>(セールス ポータル)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>製品プレゼン資料、カタログ、ホワイトペーパー、競合情報(Battlecard)</td>
+          <td>提案書スライドの素材入手、NetApp等の競合対策(Battlecard)確認。</td>
         </tr>
         <tr>
-          <td><strong>情報ポータル</strong></td>
-          <td><strong>コミュニティサイト</strong><br>(Dell Community)</td>
-          <td>現場トラブルシュート事例、ユーザーQ&A、API/スクリプト活用ノウハウ</td>
-          <td>現場SEならではの設定ノウハウやリアルな運用のTips調査。</td>
+          <td><strong>製品技術情報</strong></td>
+          <td><strong>Dell Technologies Info Hub</strong><br><span class="badge-auth">OPEN (誰でも可)</span></td>
+          <td>製品ホワイトペーパー、詳細技術ブログ、解説ビデオ</td>
+          <td>アーキテクチャ詳細、導入ベストプラクティス、他社移行検証の確認。</td>
+        </tr>
+        <tr>
+          <td><strong>相互接続性</strong></td>
+          <td><strong>E-Lab Navigator</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>旧EMCストレージ製品の相互接続性マトリクス、シンプルサポートマトリクス(SSM)</td>
+          <td>現行スイッチ・HBA・OSとDellストレージの公式接続互換性確認。</td>
+        </tr>
+        <tr>
+          <td><strong>導入手順</strong></td>
+          <td><strong>Solve Online</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>各製品ごとの詳細な導入・増設・手順書生成ツール</td>
+          <td>機器導入や増設時の正確な手順書・作業チェックリスト作成。</td>
+        </tr>
+        <tr>
+          <td><strong>保守・マニュアル</strong></td>
+          <td><strong>Dell サポート</strong><br>(Dell Support)<br><span class="badge-auth">Dell Tech ID / OPEN</span></td>
+          <td>サービスタグ検索による構成確認、管理者ガイド、リリースノート、EOL/EOSL情報</td>
+          <td>既設機器の保守・仕様確認、トラブルシューティング、最新版マニュアル取得。</td>
+        </tr>
+        <tr>
+          <td><strong>リンク・カタログ</strong></td>
+          <td><strong>情報ガイドステーション ＆ 総合カタログ</strong><br><span class="badge-auth">OPEN</span></td>
+          <td>選定ガイド、構成ガイド、コミュニティ内技術リンク集、製品総合カタログ</td>
+          <td>全体ラインナップの俯瞰、製品型番一覧、総合カタログの参照。</td>
+        </tr>
+        <tr>
+          <td><strong>コミュニティ</strong></td>
+          <td><strong>Dell サーバ／ストレージ コミュニティ</strong><br><span class="badge-auth">Dell.com ID / 閲覧OPEN</span></td>
+          <td>エンジニアQAフォーラム、トラブルシュート事例（Google検索も可）</td>
+          <td>現場ならではのニッチな疑問・過去Q&Aの検索。</td>
+        </tr>
+        <tr>
+          <td><strong>提案素材・事例</strong></td>
+          <td><strong>イメージバンク ＆ お客様導入事例</strong><br><span class="badge-auth">Dell Tech ID / OPEN</span></td>
+          <td>高解像度製品画像 ＆ 公開導入事例・事例カタログ</td>
+          <td>顧客向け提案書への製品画像貼り付け、同業他社事例の引用。</td>
         </tr>
         <tr>
           <td><strong>AIツール</strong></td>
-          <td><strong>AI アシスタント</strong><br>(ChatGPT / Gemini / Copilot)</td>
-          <td>技術仕様の要約、競合用語の解説、比較表アイデア出し、提案骨子の壁打ち</td>
-          <td>「このNetApp機能の意味は？」「動画制作向けストレージ要件」等の即時リサーチ。</td>
+          <td><strong>AI アシスタント</strong><br>(ChatGPT / Gemini / Copilot)<br><span class="badge-auth">Web</span></td>
+          <td>技術用語解説、仕様要約、提案アイデア出し、比較表の壁打ち</td>
+          <td>「NetApp機能との違い」「動画向けストレージ要件」等の即時リサーチ。</td>
         </tr>
         <tr>
           <td><strong>サイジング</strong></td>
-          <td><strong>PowerSizer</strong></td>
-          <td>ワークロード（VM/ファイル/DB）、容量、IOPS、DRRを入力して最適モデルを算出</td>
-          <td>科学的な根拠に基づくストレージ機種・ドライブ本数の自動サイジング。</td>
+          <td><strong>Dell PowerSizer</strong><br>(＆ Midrange Sizer)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>PowerEdge/PowerStore/PowerScale/ME5等のサイジングツール</td>
+          <td>ワークロード要件（VM/容量/IOPS/DRR）から最適構成を科学的に算出。</td>
         </tr>
         <tr>
           <td><strong>見積ツール</strong></td>
-          <td><strong>DSC</strong><br>(Solutions Configurator)</td>
-          <td>PowerSizer構成を反映した正確なBOM（構成見積）作成、Anytime Upgrade等の追加</td>
-          <td>正式な型番構成・オプション選択・パートナー特別価格の適用。</td>
+          <td><strong>Solutions Configurator (DSC)</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>パートナーポータルから利用する正確な構成見積・BOM作成ツール</td>
+          <td>PowerSizer構成を反映した正式型番作成、Anytime Upgrade等の追加。</td>
         </tr>
         <tr>
           <td><strong>アセスメント</strong></td>
-          <td><strong>Live Optics</strong> (秘密兵器)</td>
-          <td>無償・エージェントレスの稼働環境負荷アセスメントツール</td>
-          <td>顧客がVM/ファイルサーバーの詳細を把握できていない際、実効負荷を安全に可視化。</td>
+          <td><strong>Live Optics</strong> (無料診断ツール)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>DPACKとMitrendを統合したエージェントレスの環境負荷アセスメント</td>
+          <td>顧客がVM/ファイルサーバーの実態を未把握の際、実効負荷を安全に可視化。</td>
+        </tr>
+        <tr>
+          <td><strong>デモ・検証</strong></td>
+          <td><strong>Demo Center ＆ Dell AIOps Simulator</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>ハンズオンデモ環境 ＆ ブラウザで動くCloudIQシミュレータ</td>
+          <td>顧客へのオンライン画面デモ、管理GUIの事前操作体験。</td>
         </tr>
       </tbody>
     </table>
@@ -668,7 +721,7 @@
       <span>7. 実践力腕試し！ Microsoft Forms 小テスト 〜 ツール・AI検索OK 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！ポータル（羅針盤/ナレッジ/サポート/コミュニティ）、PowerSizer、DSC、そしてAIツール（ChatGPT/Gemini/Copilot）を使って素早く答えを導き出してください。</p>
+    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！『Dell Technologies の歩き方』で学んだ各種ポータル（羅針盤/ナレッジ/サポート/Info Hub等）、PowerSizer、DSC、そしてAIツールを使って素早く答えを導き出してください。</p>
     <table class="custom-table">
       <thead>
         <tr>
@@ -713,7 +766,7 @@
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <div style="font-size: 8.5pt;">
-      <div style="margin-bottom: 4px;"><strong>【本日の気づき・学んだこと（AI活用・顧客ファーストの視点など）】</strong></div>
+      <div style="margin-bottom: 4px;"><strong>【本日の気づき・学んだこと（AI活用・公式ポータル活用など）】</strong></div>
       <div class="memo-area">自由記入欄</div>
 
       <div style="margin-bottom: 4px;"><strong>【明日から現場で実践するアクション（ターゲット顧客・アプローチ案）】</strong></div>
@@ -724,8 +777,6 @@
     </div>
   </div>
 </main>
-
-
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
