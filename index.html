@@ -168,12 +168,12 @@
       background: #ffffff;
       border: 1px solid #dee2e6;
       border-radius: 10px;
-      padding: 16px;
+      padding: 14px;
       margin-bottom: 24px;
       position: sticky;
       top: 10px;
       z-index: 100;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
     }
     .toc-title {
       font-size: 9.5pt;
@@ -290,6 +290,24 @@
     .badge-mid  { background: #fff3cd; color: #856404; }
     .badge-bad  { background: #f8d7da; color: #721c24; }
 
+    /* Scenario Box */
+    .scenario-card {
+      background: #fdfdfe;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      font-size: 8.5pt;
+    }
+    .scenario-title {
+      font-weight: bold;
+      color: #0076ce;
+      font-size: 9pt;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 4px;
+    }
+
     /* Top Jump Link */
     .jump-top {
       font-size: 8pt;
@@ -318,9 +336,9 @@
 
   <!-- 1. COVER HERO -->
   <div class="shiori-cover" id="sec-cover">
-    <div class="shiori-tag">★ 丸紅情報・若手営業技術 提案力強化ワークショップ ★</div>
+    <div class="shiori-tag">丸紅情報 若手営業・技術向け 提案力強化ワークショップ</div>
     <div class="shiori-title">旅 の し お り</div>
-    <div class="shiori-sub">〜 顧客ファーストで挑む仮想化基盤移行クエスト ＆ デマジェン大作戦 〜</div>
+    <div class="shiori-sub">〜 顧客ファーストで挑むストレージ提案クエスト ＆ デマジェン大作戦 〜</div>
     <div>
       <img 
         src="https://glean.saleschataws-apis.dell.com/api/v1/downloadchatfile/670a10dab49f48f38b83074c28fdf636" 
@@ -342,10 +360,10 @@
     <div class="toc-buttons">
       <a href="#sec-intro" class="toc-btn">1. 心得とミッション</a>
       <a href="#sec-schedule" class="toc-btn">2. タイムテーブル</a>
-      <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・AI</a>
-      <a href="#sec-products" class="toc-btn">4. 製品図鑑（仲間たち）</a>
+      <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール</a>
+      <a href="#sec-products" class="toc-btn">4. 主要8製品ポートフォリオ</a>
       <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク</a>
-      <a href="#sec-roleplay" class="toc-btn">6. ロープレ対決（お題）</a>
+      <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ（ロープレ）</a>
       <a href="#sec-quiz" class="toc-btn">7. Forms 小テスト</a>
       <a href="#sec-demagen" class="toc-btn">8. デマジェン大作戦</a>
       <a href="#sec-memo" class="toc-btn">9. 振り返りシート</a>
@@ -366,8 +384,8 @@
     </div>
 
     <div class="callout-box callout-ai">
-      <strong>◆ AI（SalesChat / 生成AI）も活用して素早く調べよう！</strong><br>
-      知識を暗記している必要はありません。ワークショップ中や調べものの最中、競合機能の用語や技術仕様に迷ったら、社内ポータルに加えてAIアシスタントをフル活用してリサーチし、提案の引き出しを増やしましょう。
+      <strong>◆ AI（ChatGPT、Gemini、Copilot など）も活用して素早く調べよう！</strong><br>
+      知識を暗記している必要はありません。ワークショップ中や調べものの最中、競合機能の用語や技術仕様に迷ったら、社内ポータルに加えて ChatGPT、Gemini、Copilot などのAIツールをフル活用してリサーチし、提案の引き出しを増やしましょう。
     </div>
   </div>
 
@@ -387,12 +405,12 @@
       </thead>
       <tbody>
         <tr><td>10:00 - 10:15</td><td>オープニング</td><td>趣旨説明・チーム分け・顧客ファーストの心得共有</td></tr>
-        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>4大ポータル（羅針盤/ナレッジ/サポート/コミュニティ）＆ AI検索演習</td></tr>
+        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>4大ポータル ＆ AI（ChatGPT/Gemini/Copilot）検索演習</td></tr>
         <tr><td>11:00 - 12:15</td><td>【座学②】サイジング＆見積ドリル</td><td>PowerSizer（仮想環境・DRR試算）＆ DSC（BOM作成・構成）ハンズオン</td></tr>
         <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
-        <tr><td>13:15 - 14:15</td><td>【ワークショップ】〇×比較表づくり</td><td>顧客目線での「NetApp vs Dell 〇×比較表」作成（AI・ポータルフル活用）</td></tr>
+        <tr><td>13:15 - 14:15</td><td>【ワークショップ】〇×比較表づくり</td><td>3つの顧客シナリオに合わせた「〇×比較表」作成（AI・ポータルフル活用）</td></tr>
         <tr><td>14:15 - 14:25</td><td>休憩・ロープレ準備</td><td>作成した〇×表とPowerSizer構成を提案資料としてセット</td></tr>
-        <tr><td>14:25 - 15:45</td><td>【ロールプレイ大会】実戦提案バトル</td><td>VMware基盤（NetApp NFS 3Tier / OS詳細未把握）顧客役への対抗提案実演</td></tr>
+        <tr><td>14:25 - 15:45</td><td>【ロールプレイ大会】実戦提案バトル</td><td>3つの顧客シナリオ（仮想化・社内NAS散在・アニメ動画）への対抗提案実演</td></tr>
         <tr><td>15:45 - 16:15</td><td>【講評・フィードバック】</td><td>講師・メンターからの即時レビュー、Live Optics誘導の模範トーク解説</td></tr>
         <tr><td>16:15 - 16:45</td><td>【Microsoft Forms 小テスト】</td><td>全方位オープンブック型テスト（ポータル・PowerSizer・AI何でも検索OK！）</td></tr>
         <tr><td>16:45 - 17:10</td><td>【デマジェン大作戦】成果物統合</td><td>〇×表のマージ＆ダウンロード資料化、明日からの案件創出アクション宣言</td></tr>
@@ -404,52 +422,66 @@
   <!-- SECTION 3: TOOLS & PORTALS -->
   <div class="content-card" id="sec-tools">
     <div class="section-heading">
-      <span>3. 冒険の装備と情報源 〜 ポータル・サイジング・AI活用 〜</span>
+      <span>3. 冒険の装備と情報源 〜 情報元とツールの使い分け 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 25%;">情報源 / ツール</th>
-          <th style="width: 35%;">入手できる情報・機能</th>
-          <th style="width: 40%;">実践での活用シーン</th>
+          <th style="width: 14%;">区分</th>
+          <th style="width: 24%;">情報元 / ツール名</th>
+          <th style="width: 32%;">入手できる情報・主な機能</th>
+          <th style="width: 30%;">実践での活用シーン</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td><strong>情報ポータル</strong></td>
           <td><strong>パートナー羅針盤</strong><br>(Partner Portal)</td>
           <td>キャンペーン情報、特別価格施策、競合比較バトルカード、提案書スライド部品</td>
           <td>提案書の骨子作成、最新プロモーション確認、営業向けキラーメッセージ入手。</td>
         </tr>
         <tr>
+          <td><strong>情報ポータル</strong></td>
           <td><strong>ナレッジセンター</strong><br>(Info Hub / KB)</td>
           <td>製品ホワイトペーパー、サイジングガイド、ベストプラクティス、他社移行検証レポート</td>
           <td>技術的裏付け、NetAppからの移行検証データ、構成推奨値の調査。</td>
         </tr>
         <tr>
-          <td><strong>サポートサイト</strong><br>(E-Lab Navigator)</td>
-          <td>接続互換性マトリクス（OS/HBA/スイッチ）、製品仕様書、EOL/EOS情報</td>
-          <td>現行環境とDell製品の接続互換性確認、リプレイス妥当性の検証。</td>
+          <td><strong>情報ポータル</strong></td>
+          <td><strong>サポートサイト</strong><br>(Dell Support)</td>
+          <td>サービスタグ番号による個別機器情報検索、リリースノート、管理者ガイド、ファームウェア</td>
+          <td>既設機器の仕様確認、トラブルシューティング、正確な管理者マニュアルの取得。</td>
         </tr>
         <tr>
+          <td><strong>情報ポータル</strong></td>
           <td><strong>コミュニティサイト</strong><br>(Dell Community)</td>
-          <td>現場トラブルシュート事例、Q&A、API/スクリプト活用ノウハウ</td>
+          <td>現場トラブルシュート事例、ユーザーQ&A、API/スクリプト活用ノウハウ</td>
           <td>現場SEならではの設定ノウハウやリアルな運用のTips調査。</td>
         </tr>
         <tr>
-          <td><strong>AI アシスタント</strong><br>(SalesChat / 生成AI)</td>
-          <td>仕様要約、競合機能解説、比較表アイデア出し、メール・提案骨子の壁打ち</td>
-          <td>「このNetApp機能の違いは？」「Win/Linux混在時の注意点」等の即時リサーチ。</td>
+          <td><strong>AIツール</strong></td>
+          <td><strong>AI アシスタント</strong><br>(ChatGPT / Gemini / Copilot)</td>
+          <td>技術仕様の要約、競合用語の解説、比較表アイデア出し、提案骨子の壁打ち</td>
+          <td>「このNetApp機能の意味は？」「動画制作向けストレージ要件」等の即時リサーチ。</td>
         </tr>
         <tr>
-          <td><strong>PowerSizer ＆ DSC</strong></td>
-          <td>PowerSizer（仮想環境サイジング・DRR試算） ＆ DSC（BOM見積作成）</td>
-          <td>顧客要件から最適モデルを科学的に選定し、Anytime Upgrade等の必須オプションを構成。</td>
+          <td><strong>サイジング</strong></td>
+          <td><strong>PowerSizer</strong></td>
+          <td>ワークロード（VM/ファイル/DB）、容量、IOPS、DRRを入力して最適モデルを算出</td>
+          <td>科学的な根拠に基づくストレージ機種・ドライブ本数の自動サイジング。</td>
         </tr>
         <tr>
+          <td><strong>見積ツール</strong></td>
+          <td><strong>DSC</strong><br>(Solutions Configurator)</td>
+          <td>PowerSizer構成を反映した正確なBOM（構成見積）作成、Anytime Upgrade等の追加</td>
+          <td>正式な型番構成・オプション選択・パートナー特別価格の適用。</td>
+        </tr>
+        <tr>
+          <td><strong>アセスメント</strong></td>
           <td><strong>Live Optics</strong> (秘密兵器)</td>
           <td>無償・エージェントレスの稼働環境負荷アセスメントツール</td>
-          <td>顧客がVM詳細を把握できていない際、実効容量・IOPS・OS内訳を安全に可視化。</td>
+          <td>顧客がVM/ファイルサーバーの詳細を把握できていない際、実効負荷を安全に可視化。</td>
         </tr>
       </tbody>
     </table>
@@ -461,25 +493,65 @@
       <span>4. 登場する頼れる仲間たち 〜 Dell製品ポートフォリオ図鑑 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>どのような製品を選び、どう組み合わせるかは<strong>【各チームの自由】</strong>です！顧客にとってベストなアーキテクチャを自由に組み立ててください。</p>
+    <p>本ワークショップでは厳選された以下の<strong>主要8製品</strong>が登場します。どの製品を選び、どう組み合わせるかは<strong>【自由】</strong>です！</p>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 25%;">カテゴリ / 製品名</th>
-          <th style="width: 38%;">製品の特徴・強み</th>
-          <th style="width: 37%;">提案での主な役割・組み合わせ例</th>
+          <th style="width: 16%;">カテゴリ</th>
+          <th style="width: 20%;">製品名</th>
+          <th style="width: 32%;">製品の特徴・強み</th>
+          <th style="width: 32%;">提案での主な役割・使いどころ</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><strong>【サーバー】<br>PowerEdge</strong></td><td>業界シェアNo.1の高集約・高信頼サーバー。iDRACによる高度な運用自動化。</td><td>3Tier構成の仮想化コンピュート基盤として外付けストレージと連携。</td></tr>
-        <tr><td><strong>【プライマリストレージ】<br>PowerStore</strong></td><td>NVMeネイティブ、常時4:1データ削減保証、Anytime Upgrade（無停止刷新）。</td><td>仮想化基盤の本命。NetApp AFF/FASからの移行で性能・運用・TCOを大幅改善。</td></tr>
-        <tr><td><strong>【プライマリストレージ】<br>PowerVault ME5</strong></td><td>圧倒的低価格・シンプルな専用SAN/DASストレージ。簡単セットアップ。</td><td>コスト最優先、バックアップ専用ターゲット、エントリー仮想基盤の最適解。</td></tr>
-        <tr><td><strong>【プライマリストレージ】<br>Unity XT</strong></td><td>実績多数のエンタープライズ・ユニファイド（SAN/NAS）。堅牢性とコストの両立。</td><td>中規模環境でファイル共有と仮想基盤を柔軟に統合する受け皿。</td></tr>
-        <tr><td><strong>【重複排除ストレージ】<br>Data Domain (PowerProtect DD)</strong></td><td>業界標準の超高効率重複排除（平均65:1）。堅牢なデータ保護・イミュータブル保管。</td><td>仮想環境のバックアップ先として統合し、保存容量とネットワーク負荷を激減。</td></tr>
-        <tr><td><strong>【データ保護ソフト】<br>PowerProtect Data Manager (PPDM)</strong></td><td>次世代VMware保護（Transparent SnapshotsによるVM無停止保護）。K8s対応。</td><td>仮想マシンに一切負荷をかけずに高速・安全なバックアップ運用を実現。</td></tr>
-        <tr><td><strong>【SaaSバックアップ】<br>PowerProtect Backup Services (PPBS)</strong></td><td>クラウドネイティブ（SaaS）バックアップ。インフラ構築不要で即時利用可能。</td><td>M365、エンドポイント、クラウド上のワークロードを一元バックアップ。</td></tr>
-        <tr><td><strong>【統合管理】<br>DDPC / DPC</strong></td><td>Data Domain Management Center (DDPC) ＆ Data Protection Central (DPC)。</td><td>複数拠点のData Domainやバックアップ環境の一元監視・容量可視化。</td></tr>
-        <tr><td><strong>【HCIアプライアンス】<br>AX / XC シリーズ</strong></td><td>AX: Microsoft Azure Stack HCI専用ノード<br>XC: Nutanix搭載アプライアンス</td><td>3TierからHCIへの刷新提案。運用シンプル化やハイブリッドクラウド連携。</td></tr>
+        <tr>
+          <td><strong>サーバー</strong></td>
+          <td><strong>PowerEdge</strong></td>
+          <td>業界シェアNo.1の高集約・高信頼サーバー。iDRACによる高度な運用自律化。</td>
+          <td>仮想化基盤コンピュート、レンダリングサーバー、管理基盤。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(エントリー)</strong></td>
+          <td><strong>PowerVault ME5</strong></td>
+          <td>圧倒的低価格・シンプルな専用SAN/DAS。簡単セットアップと高コスパ。</td>
+          <td>初期費用を極限まで抑えたい仮想化、中小規模ファイルサーバー。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(ミッドレンジ)</strong></td>
+          <td><strong>Unity XT</strong></td>
+          <td>実績多数のエンタープライズ・ユニファイド（SAN/NAS）。堅牢性とコストの両立。</td>
+          <td>既存のファイル共有とブロックを安定して統合する受け皿。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(次世代ミッド)</strong></td>
+          <td><strong>PowerStore</strong></td>
+          <td>NVMeネイティブ、常時4:1データ削減保証、Anytime Upgrade（無停止刷新）。</td>
+          <td>仮想化基盤リプレイスの本命。NetApp AFF/FAS対抗の決定打。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(スケールアウトNAS)</strong></td>
+          <td><strong>PowerScale</strong></td>
+          <td>単一ボリュームで巨大拡張するスケールアウトNAS。超高速スループット＆高耐障害性。</td>
+          <td>アニメ・映像制作の高負荷レンダリング、大容量ファイル統合。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(ソフトウェア定義)</strong></td>
+          <td><strong>PowerFlex</strong></td>
+          <td>極めて高い拡張性と超高IOPSを誇るソフトウェアデファインド・ストレージ。</td>
+          <td>大規模仮想化基盤、異種ハイパーバイザー統合、高性能基盤。</td>
+        </tr>
+        <tr>
+          <td><strong>ストレージ<br>(ミッションクリティカル)</strong></td>
+          <td><strong>PowerMax</strong></td>
+          <td>99.99999%の超高可用性、最高峰の耐障害性とエンドツーエンドNVMe性能。</td>
+          <td>金融・基幹系システム、絶対に止められない超重要インフラ。</td>
+        </tr>
+        <tr>
+          <td><strong>重複排除<br>バックアップ</strong></td>
+          <td><strong>Data Domain<br>(PowerProtect DD)</strong></td>
+          <td>業界標準の超高効率重複排除（平均65:1）。堅牢なイミュータブル保管（不変保護）。</td>
+          <td>仮想基盤・ファイルサーバーのバックアップ統合、ランサムウェア対策。</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -490,43 +562,43 @@
       <span>5. ワークショップ 〜 顧客目線の「NetApp対抗 〇×比較表」作成 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>顧客が稟議を通す際に『客観的に見てどちらが自社に合っているか』を判断できる〇×表を作成します。AIやポータルを検索しながら客観的な視点で埋めていきましょう。</p>
+    <p>顧客が稟議を通す際に『客観的に見てどちらが自社に合っているか』を判断できる〇×表をチームで作成します。AIやポータルを検索しながら客観的な視点で埋めていきましょう。</p>
     <table class="custom-table">
       <thead>
         <tr>
           <th style="width: 25%;">評価項目（顧客の関心事）</th>
-          <th style="width: 15%;">現行 NetApp (NFS)</th>
-          <th style="width: 15%;">Dell 提案構成</th>
-          <th style="width: 45%;">顧客目線での解説・キラーメッセージ</th>
+          <th style="width: 14%;">現行 NetApp</th>
+          <th style="width: 14%;">Dell 提案構成</th>
+          <th style="width: 47%;">顧客目線での解説・キラーメッセージ</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>現状把握とサイジング</strong><br>（VM詳細が不明な状態）</td>
+          <td><strong>現状把握とサイジング</strong><br>（実態が不透明な状態）</td>
           <td><span class="badge-mark badge-mid">△</span> 顧客任せ・高額化</td>
           <td><span class="badge-mark badge-good">◎</span> Live Optics＋PowerSizer</td>
           <td>「現状が見えなくても無償Live Opticsで精密診断し、過剰投資を防ぎます」</td>
         </tr>
         <tr>
-          <td><strong>データ削減効果</strong><br>（Win/Linux混在環境）</td>
+          <td><strong>データ削減効果・実効容量</strong><br>（容量枯渇・不透明感）</td>
           <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・設定依存</td>
           <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証</td>
-          <td>「OS混在環境でも契約で4:1削減を保証。容量不足のリスクを排除します」</td>
+          <td>「事前診断＋4:1削減保証で、無駄なドライブ追加コストを完全に排除」</td>
         </tr>
         <tr>
-          <td><strong>VMware運用性・接続方式</strong><br>（NFS運用の今後）</td>
-          <td><span class="badge-mark badge-mid">◯</span> NFS接続の継続</td>
-          <td><span class="badge-mark badge-good">◎</span> vVols / NVMe-oF / NFS</td>
-          <td>「NFS運用の良さを残しつつ、vVolsでVM単位のきめ細かい管理へ進化」</td>
+          <td><strong>拡張性とパフォーマンス</strong><br>（高負荷レンダリング等）</td>
+          <td><span class="badge-mark badge-mid">△</span> コントローラ上限の壁</td>
+          <td><span class="badge-mark badge-good">◎</span> PowerScale (スケールアウト)</td>
+          <td>「ノード追加だけで容量と性能がリニアに拡張。単一ボリュームで管理も楽」</td>
         </tr>
         <tr>
-          <td><strong>バックアップ・データ保護</strong><br>（VMバックアップ負荷）</td>
-          <td><span class="badge-mark badge-mid">△</span> スナップショット依存</td>
-          <td><span class="badge-mark badge-good">◎</span> Data Domain ＋ PPDM</td>
-          <td>「Transparent SnapshotsによりVMを停止・低速化させずに確実保護」</td>
+          <td><strong>コスト・初期導入費用</strong><br>（低予算・シンプル志向）</td>
+          <td><span class="badge-mark badge-mid">△</span> 多機能で高価格帯</td>
+          <td><span class="badge-mark badge-good">◎</span> PowerVault ME5</td>
+          <td>「運用に手間がかかっても初期費用を抑えたい用途には圧倒的高コスパ」</td>
         </tr>
         <tr>
-          <td><strong>将来の更改・ライフサイクル</strong><br>（5年後のデータ移行）</td>
+          <td><strong>将来の更改・データ移行</strong><br>（次期更新プロジェクト）</td>
           <td><span class="badge-mark badge-bad">×</span> 大規模移行PJ要</td>
           <td><span class="badge-mark badge-good">◎</span> Anytime Upgrade</td>
           <td>「次回更改は無停止コントローラ交換。データ移行の手間とコストをゼロに」</td>
@@ -535,22 +607,43 @@
     </table>
   </div>
 
-  <!-- SECTION 6: ROLEPLAY -->
+  <!-- SECTION 6: ROLEPLAY SCENARIOS -->
   <div class="content-card" id="sec-roleplay">
     <div class="section-heading">
-      <span>6. ロールプレイ対決 〜 仮想環境移行クエスト 〜</span>
+      <span>6. ロールプレイ対決 〜 実戦3大シナリオ 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
 
-    <div class="sub-heading">■ 顧客カルテ（商談シナリオ）</div>
-    <div style="background: #fdfdfe; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 8.5pt; margin-bottom: 12px;">
-      <strong>【顧客プロファイル】</strong> 中堅製造業（情報システム部 インフラ担当課長 ＆ 主任）<br>
-      <strong>【現行システム】</strong> 物理サーバー数台 ＋ NetAppストレージ（3Tier構成、NFS接続）／ VMware vSphere（VM約60台、Win/SUSE Linux混在）<br>
-      <strong>【顧客のリアルな悩み・発言】</strong><br>
-      1. 「NetAppの保守が来年切れるが、担当者が異動して各VMの詳細（容量・負荷・OS）を把握できていない」<br>
-      2. 「ずっとNFSで使ってきたので、SANに変えると設計やデータ移行が大変そうで不安」<br>
-      3. 「WindowsとSUSE Linuxが混ざっているが、Dellに替えて容量やバックアップはどうなるのか？」<br>
-      4. 「3Tierを続けるべきか、HCIにするべきかも悩んでいる。NetApp継続の選択肢も含めてフラットに提案してほしい」
+    <!-- Scenario 1 -->
+    <div class="scenario-card">
+      <div class="scenario-title">■ シナリオ①：既存 NetApp NFS を使った vSphere 仮想化基盤のリプレース</div>
+      <p style="margin: 4px 0;">
+        <strong>【顧客背景】</strong> 昨今のブロードコムショックによるコスト上昇を受け、来年6月の保守切れを機に仮想化基盤を刷新したい。<br>
+        <strong>【顧客状況】</strong> ゲストVMの詳細は把握しておらず、ざっくり50VM程度でサイジングしてほしい。<br>
+        <strong>【顧客要望】</strong> 多少運用に手間がかかるとしても、初期費用を極力安く抑えたい。<br>
+        <strong>【攻略ヒント】</strong> Live Opticsによる実態診断 ＋ PowerVault ME5（最安） vs PowerStore（4:1保証・Anytime Upgrade）の選択肢提示。
+      </p>
+    </div>
+
+    <!-- Scenario 2 -->
+    <div class="scenario-card">
+      <div class="scenario-title">■ シナリオ②：社内に点在する小規模ファイルサーバーの問題（野良NAS・ウィルス）</div>
+      <p style="margin: 4px 0;">
+        <strong>【顧客背景】</strong> 現在4事業部にNetAppファイルサーバーを設置。うち3事業部で容量枯渇しそうだが使用実態が見えていない（2事業部は詳しい人に管理を任せきり）。<br>
+        <strong>【事件発生】</strong> 3か月前、資材部が無断購入（野良NAS：バッファロー製）していたサーバーからウィルスが検知され、IT部門に泣きついてきた。現在はネット隔離したのみ。<br>
+        <strong>【顧客要望】</strong> 全社のファイルサーバーを安全に統合・一元管理し、野良NASの撲滅とウィルス・ランサムウェア対策を行いたい。<br>
+        <strong>【攻略ヒント】</strong> Unity XTまたはPowerStore/PowerScaleによるファイル統合 ＋ Data Domainによる隔離・不変バックアップ提案。
+      </p>
+    </div>
+
+    <!-- Scenario 3 -->
+    <div class="scenario-card">
+      <div class="scenario-title">■ シナリオ③：アニメーション会社の動画ファイルサーバー提案（超高負荷・大容量）</div>
+      <p style="margin: 4px 0;">
+        <strong>【顧客背景】</strong> 膨大な動画ファイルを保存・編集するためのファイルサーバーを新規検討中。今後の業務提携でデータ容量は爆発的に増える見込み。<br>
+        <strong>【顧客要望】</strong> データは最重要資産のため強固な耐障害性が必要。また、本社にあるレンダリングサーバーからの激しいI/Oに耐えうる超高速性能が必須。<br>
+        <strong>【攻略ヒント】</strong> スケールアウトNAS『PowerScale』の提案。OneFSによる単一ボリューム拡張性、広帯域スループット、耐障害性をアピール。
+      </p>
     </div>
 
     <div class="sub-heading">■ 審査ルーブリック（100点満点）</div>
@@ -563,10 +656,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td><strong>顧客ファーストの傾聴＆Live Optics誘導</strong></td><td>25点</td><td>「詳細不明」に対し、無理に売り込まず無償Live Optics診断を誠実に提案できたか。</td></tr>
+        <tr><td><strong>顧客ファーストの傾聴＆Live Optics誘導</strong></td><td>25点</td><td>実態不明や不安に対し、無理に売り込まず無償Live Optics診断を誠実に提案できたか。</td></tr>
         <tr><td><strong>客観的な〇×比較表の活用</strong></td><td>25点</td><td>自作〇×表を提示し、NetAppの良さも認めつつ顧客メリットを論理的に説明できたか。</td></tr>
-        <tr><td><strong>製品構成の妥当性 (PowerSizer/DSC活用)</strong></td><td>25点</td><td>PowerStore/PowerEdge/Data Domain/HCI等を自由に組み合わせ、最適な理由を語れたか。</td></tr>
-        <tr><td><strong>営業・SEの連携＆クロージング</strong></td><td>25点</td><td>営業とSEの息が合い、顧客の不安を払拭して「Live Optics診断実施」の合意を得られたか。</td></tr>
+        <tr><td><strong>製品構成の妥当性 (PowerSizer/DSC活用)</strong></td><td>25点</td><td>主要8製品からシナリオに合致した最適な製品を選定し、選定理由を語れたか。</td></tr>
+        <tr><td><strong>営業・SEの連携＆クロージング</strong></td><td>25点</td><td>営業とSEの息が合い、顧客の不安を払拭して「診断実施・次回提案」の合意を得られたか。</td></tr>
       </tbody>
     </table>
   </div>
@@ -577,7 +670,7 @@
       <span>7. 実践力腕試し！ Microsoft Forms 小テスト 〜 ツール・AI検索OK 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！ポータル（羅針盤/ナレッジ/サポート/コミュニティ）、PowerSizer、DSC、そしてAIツールを使って素早く答えを導き出してください。</p>
+    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！ポータル（羅針盤/ナレッジ/サポート/コミュニティ）、PowerSizer、DSC、そしてAIツール（ChatGPT/Gemini/Copilot）を使って素早く答えを導き出してください。</p>
     <table class="custom-table">
       <thead>
         <tr>
@@ -587,10 +680,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td><strong>情報ポータル活用力</strong><br>(羅針盤/ナレッジ/サポート)</td><td>適切なポータルから正確な公式情報を素早く見つけられるか</td><td>「NetAppからPowerStoreへのデータ移行手順書（WhitePaper）のタイトルを検索して答えよ」</td></tr>
-        <tr><td><strong>PowerSizer / DSC<br>実践サイジング力</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB・Win/Linux混在時、PowerStoreで4:1削減適用時の必要物理容量は？」</td></tr>
-        <tr><td><strong>製品選定＆NetApp対抗<br>（顧客ファースト）</strong></td><td>競合特徴とDell差別化ポイントを正しく理解しているか</td><td>「NetApp ONTAPのNFS運用に慣れた顧客に対し、PowerStoreで提案すべきプロトコルと移行利点は？」</td></tr>
-        <tr><td><strong>データ保護＆HCI<br>ポートフォリオ理解</strong></td><td>Data Domain/PPDMやHCIの使いどころを理解しているか</td><td>「VMware環境で仮想マシンに負荷をかけずにバックアップ可能なPPDMの機能名（〇〇 Snapshots）は？」</td></tr>
+        <tr><td><strong>情報ポータル活用力</strong><br>(羅針盤/ナレッジ/サポート)</td><td>適切なポータルから正確な公式情報を素早く見つけられるか</td><td>「サポートサイトで特定サービスタグの機器構成や最新管理者ガイドを検索せよ」</td></tr>
+        <tr><td><strong>PowerSizer / DSC<br>実践サイジング力</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB時、PowerStoreで4:1削減適用時の必要物理容量を算出せよ」</td></tr>
+        <tr><td><strong>製品選定＆競合対抗<br>（顧客ファースト）</strong></td><td>3大シナリオ（仮想化・野良NAS統合・動画）の最適解を語れるか</td><td>「レンダリングサーバーからの激しいI/Oに耐えるスケールアウトNAS製品とその理由は？」</td></tr>
+        <tr><td><strong>データ保護＆セキュリティ<br>ポートフォリオ理解</strong></td><td>Data Domain等のイミュータブル保護やバックアップ統合を理解しているか</td><td>「野良NASウィルス事件に対し、Data Domainで実現できる不変保護機能の名称は？」</td></tr>
       </tbody>
     </table>
   </div>
@@ -602,7 +695,7 @@
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <div style="font-size: 8.5pt;">
-      <p><strong>【成果物のホワイトペーパー化】</strong> 各チームが作成した〇×表をマージし、『【VMware×NetAppユーザー必読】仮想化基盤ストレージ移行・選定ガイド』としてPDFダウンロード資料を作成します。</p>
+      <p><strong>【成果物のホワイトペーパー化】</strong> 各チームが作成した〇×表をマージし、『【課題別】ストレージ選定・移行ガイド（仮想化刷新・ファイル統合・動画基盤）』としてPDFダウンロード資料を作成します。</p>
       <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; margin-top: 8px;">
         <strong>◆ デマジェン実行ステップ（案件化ロードマップ）</strong>
         <ol style="margin: 6px 0 0 16px; padding: 0;">
@@ -633,6 +726,7 @@
     </div>
   </div>
 </main>
+
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
