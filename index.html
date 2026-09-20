@@ -289,15 +289,56 @@
     .badge-good { background: #d4edda; color: #155724; }
     .badge-mid  { background: #fff3cd; color: #856404; }
     .badge-bad  { background: #f8d7da; color: #721c24; }
+
+    /* Auth Badge / Link Styling */
     .badge-auth {
       display: inline-block;
       font-size: 7.5pt;
-      padding: 1px 4px;
+      padding: 1px 5px;
       border-radius: 3px;
       font-weight: normal;
       background: #e9ecef;
       color: #495057;
-      margin-top: 2px;
+      margin-top: 3px;
+    }
+    .badge-auth-id { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .badge-auth-open { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-auth-req { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+    .tool-link {
+      color: #0076ce;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: color 0.2s ease;
+    }
+    .tool-link:hover {
+      color: #004b87;
+      text-decoration: underline;
+    }
+    .tool-link::after {
+      content: "↗";
+      font-size: 8pt;
+      font-weight: normal;
+    }
+
+    /* Footnote Legend Box */
+    .legend-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      font-size: 8pt;
+      line-height: 1.6;
+    }
+    .legend-title {
+      font-weight: bold;
+      color: #0076ce;
+      font-size: 8.5pt;
+      margin-bottom: 6px;
     }
 
     /* Scenario Box */
@@ -429,115 +470,196 @@
     </table>
   </div>
 
-  <!-- SECTION 3: TOOLS & PORTALS (Based on Dell Technologies no Arukikata) -->
+  <!-- SECTION 3: TOOLS & PORTALS (LINKS + AUTH BADGES + DETAILED LEGEND) -->
   <div class="content-card" id="sec-tools">
     <div class="section-heading">
       <span>3. 冒険の装備と情報源 〜 Dell Technologies 公式ポータル ＆ ツール一覧 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p style="font-size: 8.5pt; margin-top: 0;">『Dell Technologies の歩き方【サーバー・ストレージ編】』に準拠した、提案・調査・サイジングで駆使する主要リソース一覧です。</p>
+    <p style="font-size: 8.5pt; margin-top: 0;">『Dell Technologies の歩き方【サーバー・ストレージ編】』に準拠した公式リソース一覧です。<strong>ツール名をクリックすると新規タブで該当サービス・サイトが開きます。</strong></p>
+
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 15%;">区分</th>
-          <th style="width: 25%;">情報元 / ツール名</th>
-          <th style="width: 32%;">入手できる情報・主な機能</th>
+          <th style="width: 14%;">区分</th>
+          <th style="width: 25%;">情報元 / ツール名（クリックで移動）</th>
+          <th style="width: 33%;">入手できる情報・主な機能</th>
           <th style="width: 28%;">実践での活用シーン</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>専用ポータル</strong></td>
-          <td><strong>パートナー ポータル</strong><br>(Partner Portal)<br><span class="badge-auth">Dell Tech ID</span></td>
-          <td>パートナープログラム、案件登録、アカウント管理、各種ツールへのリンク集</td>
+          <td>
+            <a href="https://www.delltechnologies.com/partner/ja-jp/partner/partner.htm" target="_blank" rel="noopener noreferrer" class="tool-link">パートナー ポータル</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
+          <td>パートナープログラム、案件登録、アカウント管理、ツールリンク集</td>
           <td>商談の案件登録、特別価格申請、各専用ツールへのアクセス起点。</td>
         </tr>
         <tr>
           <td><strong>技術ポータル</strong></td>
-          <td><strong>パートナー技術羅針盤</strong><br>(Partner Tech Compass)<br><span class="badge-auth">個別登録</span></td>
+          <td>
+            <a href="https://www.delltechnologies.com/partner/ja-jp/auth/technical-portal.htm" target="_blank" rel="noopener noreferrer" class="tool-link">パートナー技術羅針盤</a><br>
+            <span class="badge-auth badge-auth-req">個別登録</span>
+          </td>
           <td>HEROES、徹底攻略塾、Tech Portalを統合したSE向け技術ハブ</td>
           <td>最新の技術セミナー資料、勉強会アーカイブ、技術アップデート確認。</td>
         </tr>
         <tr>
           <td><strong>提案・競合</strong></td>
-          <td><strong>ナレッジ センター</strong><br>(セールス ポータル)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://www.delltechnologies.com/resources/ja-jp/auth/index.htm" target="_blank" rel="noopener noreferrer" class="tool-link">ナレッジ センター</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>製品プレゼン資料、カタログ、ホワイトペーパー、競合情報(Battlecard)</td>
           <td>提案書スライドの素材入手、NetApp等の競合対策(Battlecard)確認。</td>
         </tr>
         <tr>
           <td><strong>製品技術情報</strong></td>
-          <td><strong>Dell Technologies Info Hub</strong><br><span class="badge-auth">OPEN (誰でも可)</span></td>
+          <td>
+            <a href="https://infohub.delltechnologies.com/ja-jp/" target="_blank" rel="noopener noreferrer" class="tool-link">Dell Technologies Info Hub</a><br>
+            <span class="badge-auth badge-auth-open">OPEN</span>
+          </td>
           <td>製品ホワイトペーパー、詳細技術ブログ、解説ビデオ</td>
           <td>アーキテクチャ詳細、導入ベストプラクティス、他社移行検証の確認。</td>
         </tr>
         <tr>
           <td><strong>相互接続性</strong></td>
-          <td><strong>E-Lab Navigator</strong><br><span class="badge-auth">Dell Tech ID</span></td>
-          <td>旧EMCストレージ製品の相互接続性マトリクス、シンプルサポートマトリクス(SSM)</td>
+          <td>
+            <a href="https://elabnavigator.dell.com/eln/elnhome" target="_blank" rel="noopener noreferrer" class="tool-link">E-Lab Navigator</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
+          <td>旧EMCストレージ製品の相互接続性マトリクス、SSMダウンロード</td>
           <td>現行スイッチ・HBA・OSとDellストレージの公式接続互換性確認。</td>
         </tr>
         <tr>
           <td><strong>導入手順</strong></td>
-          <td><strong>Solve Online</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://solve.dell.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Solve Online</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>各製品ごとの詳細な導入・増設・手順書生成ツール</td>
           <td>機器導入や増設時の正確な手順書・作業チェックリスト作成。</td>
         </tr>
         <tr>
           <td><strong>保守・マニュアル</strong></td>
-          <td><strong>Dell サポート</strong><br>(Dell Support)<br><span class="badge-auth">Dell Tech ID / OPEN</span></td>
-          <td>サービスタグ検索による構成確認、管理者ガイド、リリースノート、EOL/EOSL情報</td>
+          <td>
+            <a href="https://www.dell.com/support/home/ja-jp" target="_blank" rel="noopener noreferrer" class="tool-link">Dell サポート (Dell Support)</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span> / <span class="badge-auth badge-auth-open">OPEN</span>
+          </td>
+          <td>サービスタグ検索による構成確認、管理者ガイド、リリースノート、EOL/EOSL</td>
           <td>既設機器の保守・仕様確認、トラブルシューティング、最新版マニュアル取得。</td>
         </tr>
         <tr>
           <td><strong>リンク・カタログ</strong></td>
-          <td><strong>情報ガイドステーション ＆ 総合カタログ</strong><br><span class="badge-auth">OPEN</span></td>
+          <td>
+            <a href="https://www.dell.com/community/ja/conversations/情報ガイドスペース/情報ガイドステーション-リンク集/673be978e1560d043c41765c" target="_blank" rel="noopener noreferrer" class="tool-link">情報ガイドステーション</a><br>
+            <a href="https://www.delltechnologies.com/asset/ja-jp/solutions/business-solutions/technical-support/dell-technologies-product-solution-general-catalog.pdf" target="_blank" rel="noopener noreferrer" class="tool-link" style="font-size: 8pt;">（総合カタログPDF）</a><br>
+            <span class="badge-auth badge-auth-open">OPEN</span>
+          </td>
           <td>選定ガイド、構成ガイド、コミュニティ内技術リンク集、製品総合カタログ</td>
           <td>全体ラインナップの俯瞰、製品型番一覧、総合カタログの参照。</td>
         </tr>
         <tr>
           <td><strong>コミュニティ</strong></td>
-          <td><strong>Dell サーバ／ストレージ コミュニティ</strong><br><span class="badge-auth">Dell.com ID / 閲覧OPEN</span></td>
+          <td>
+            <a href="https://www.dell.com/community/ja/categories/サーバ" target="_blank" rel="noopener noreferrer" class="tool-link">サーバ コミュニティ</a> / 
+            <a href="https://www.dell.com/community/ja/topics/ストレージ-コミュニティ" target="_blank" rel="noopener noreferrer" class="tool-link">ストレージ</a><br>
+            <span class="badge-auth badge-auth-id">Dell.com ID</span> / <span class="badge-auth badge-auth-open">閲覧OPEN</span>
+          </td>
           <td>エンジニアQAフォーラム、トラブルシュート事例（Google検索も可）</td>
           <td>現場ならではのニッチな疑問・過去Q&Aの検索。</td>
         </tr>
         <tr>
           <td><strong>提案素材・事例</strong></td>
-          <td><strong>イメージバンク ＆ お客様導入事例</strong><br><span class="badge-auth">Dell Tech ID / OPEN</span></td>
+          <td>
+            <a href="https://www.delltechnologies.com/partner/ja-jp/auth/marketing/image-bank.htm" target="_blank" rel="noopener noreferrer" class="tool-link">イメージバンク</a> / 
+            <a href="https://www.dell.com/ja-jp/dt/case-studies-customer-stories/index.htm" target="_blank" rel="noopener noreferrer" class="tool-link">導入事例</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span> / <span class="badge-auth badge-auth-open">OPEN</span>
+          </td>
           <td>高解像度製品画像 ＆ 公開導入事例・事例カタログ</td>
           <td>顧客向け提案書への製品画像貼り付け、同業他社事例の引用。</td>
         </tr>
         <tr>
           <td><strong>AIツール</strong></td>
-          <td><strong>AI アシスタント</strong><br>(ChatGPT / Gemini / Copilot)<br><span class="badge-auth">Web</span></td>
+          <td>
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" class="tool-link">ChatGPT</a> / 
+            <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Gemini</a> / 
+            <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Copilot</a><br>
+            <span class="badge-auth">Web</span>
+          </td>
           <td>技術用語解説、仕様要約、提案アイデア出し、比較表の壁打ち</td>
           <td>「NetApp機能との違い」「動画向けストレージ要件」等の即時リサーチ。</td>
         </tr>
         <tr>
           <td><strong>サイジング</strong></td>
-          <td><strong>Dell PowerSizer</strong><br>(＆ Midrange Sizer)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://powersizer.dell.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Dell PowerSizer</a><br>
+            <a href="https://midrangesizer.dell.com/?lang=ja-JP" target="_blank" rel="noopener noreferrer" class="tool-link" style="font-size: 8pt;">（Midrange Sizer）</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>PowerEdge/PowerStore/PowerScale/ME5等のサイジングツール</td>
           <td>ワークロード要件（VM/容量/IOPS/DRR）から最適構成を科学的に算出。</td>
         </tr>
         <tr>
           <td><strong>見積ツール</strong></td>
-          <td><strong>Solutions Configurator (DSC)</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://www.delltechnologies.com/partner/ja-jp/partner/partner.htm" target="_blank" rel="noopener noreferrer" class="tool-link">Solutions Configurator (DSC)</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>パートナーポータルから利用する正確な構成見積・BOM作成ツール</td>
           <td>PowerSizer構成を反映した正式型番作成、Anytime Upgrade等の追加。</td>
         </tr>
         <tr>
           <td><strong>アセスメント</strong></td>
-          <td><strong>Live Optics</strong> (無料診断ツール)<br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://app.liveoptics.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Live Optics (無料診断)</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>DPACKとMitrendを統合したエージェントレスの環境負荷アセスメント</td>
           <td>顧客がVM/ファイルサーバーの実態を未把握の際、実効負荷を安全に可視化。</td>
         </tr>
         <tr>
           <td><strong>デモ・検証</strong></td>
-          <td><strong>Demo Center ＆ Dell AIOps Simulator</strong><br><span class="badge-auth">Dell Tech ID</span></td>
+          <td>
+            <a href="https://democenter.dell.com/" target="_blank" rel="noopener noreferrer" class="tool-link">Demo Center</a> / 
+            <a href="https://aiops.dell.com/simulator/" target="_blank" rel="noopener noreferrer" class="tool-link">AIOps Simulator</a><br>
+            <span class="badge-auth badge-auth-id">Dell Tech ID</span>
+          </td>
           <td>ハンズオンデモ環境 ＆ ブラウザで動くCloudIQシミュレータ</td>
           <td>顧客へのオンライン画面デモ、管理GUIの事前操作体験。</td>
         </tr>
       </tbody>
     </table>
+
+    <!-- Footnote & Account Legend -->
+    <div class="legend-box">
+      <div class="legend-title">【アクセス権マークの解説 ＆ アカウント作成・申請方法】</div>
+      <ul style="margin: 0; padding-left: 18px;">
+        <li>
+          <strong><span class="badge-auth badge-auth-id">Dell Tech ID</span>（Dell Technologies ID）：</strong><br>
+          パートナー専用サイト（ポータル、ナレッジセンター、PowerSizer、DSC等）にアクセスするための公式企業アカウントです。<br>
+          <em>［アカウント作成方法］</em> パートナー企業ドメインのメールアドレスを使用し、<a href="https://www.delltechnologies.com/partner/ja-jp/partner/partner.htm" target="_blank" rel="noopener noreferrer" style="color: #0076ce;">パートナーポータル新規登録ページ</a>から申請するか、貴社社内の「パートナー管理者」にアカウント追加をご依頼ください。
+        </li>
+        <li>
+          <strong><span class="badge-auth badge-auth-req">個別登録</span>（パートナー技術羅針盤）：</strong><br>
+          SE向け専用技術ハブ［Partner Tech Compass］へアクセスするための専用申請です。パートナーポータルログイン後に専用フォームからアクセス申請を行います。
+        </li>
+        <li>
+          <strong><span class="badge-auth badge-auth-id">Dell.com ID</span>：</strong><br>
+          Dell Community（フォーラムへの質問投稿など）で使用するアカウントです。Dell.comトップからどなたでも無料で新規登録可能です（※過去QAの閲覧だけならログイン不要です）。
+        </li>
+        <li>
+          <strong><span class="badge-auth badge-auth-open">OPEN</span>：</strong><br>
+          アカウント不要。どなたでもブラウザから直接アクセス・閲覧・PDFダウンロードが可能です。
+        </li>
+        <li>
+          <strong><span class="badge-auth">Web</span>：</strong><br>
+          一般的な外部Webサービスです。各AIサービス（ChatGPT / Gemini / Copilot等）の利用規約・アカウントに従ってアクセスします。
+        </li>
+      </ul>
+    </div>
   </div>
 
   <!-- SECTION 4: PRODUCTS -->
@@ -777,6 +899,7 @@
     </div>
   </div>
 </main>
+
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
