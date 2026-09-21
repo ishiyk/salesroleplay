@@ -254,6 +254,20 @@
       border-left: 4px solid #e36414;
       color: #8a3b00;
     }
+    .callout-secret {
+      background-color: #fffbe6;
+      border-left: 4px solid #e36414;
+      color: #78350f;
+      border: 1px solid #fde68a;
+      border-left-width: 5px;
+    }
+    .callout-discuss {
+      background-color: #f0f7ff;
+      border-left: 4px solid #0076ce;
+      color: #004b87;
+      border: 1px solid #bae6fd;
+      border-left-width: 5px;
+    }
 
     /* Compact Tables */
     .custom-table {
@@ -322,6 +336,28 @@
       content: "↗";
       font-size: 8pt;
       font-weight: normal;
+    }
+
+    /* Workflow Step Box */
+    .step-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .step-card {
+      background: #fdfdfe;
+      border: 1px solid #cbd5e1;
+      border-top: 3px solid #0076ce;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 8.5pt;
+    }
+    .step-num {
+      font-weight: bold;
+      color: #0076ce;
+      font-size: 9pt;
+      margin-bottom: 4px;
     }
 
     /* Footnote Legend Box */
@@ -410,10 +446,10 @@
     </div>
     <div class="toc-buttons">
       <a href="#sec-intro" class="toc-btn">1. 心得とミッション</a>
-      <a href="#sec-schedule" class="toc-btn">2. タイムテーブル</a>
+      <a href="#sec-schedule" class="toc-btn">2. タイムテーブル＆講師</a>
       <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール一覧</a>
       <a href="#sec-products" class="toc-btn">4. 主要8製品ポートフォリオ</a>
-      <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク</a>
+      <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク＆進め方</a>
       <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ（ロープレ）</a>
       <a href="#sec-quiz" class="toc-btn">7. Forms 小テスト</a>
       <a href="#sec-demagen" class="toc-btn">8. デマジェン大作戦</a>
@@ -440,32 +476,35 @@
     </div>
   </div>
 
-  <!-- SECTION 2: SCHEDULE -->
+  <!-- SECTION 2: SCHEDULE & SPEAKERS -->
   <div class="content-card" id="sec-schedule">
     <div class="section-heading">
-      <span>2. 一日のながれ（タイムスケジュール）</span>
+      <span>2. 一日のながれ（タイムスケジュール ＆ 登壇講師）</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 18%;">時間</th>
-          <th style="width: 32%;">プログラム・セッション</th>
-          <th style="width: 50%;">内容・達成ゴール</th>
+          <th style="width: 15%;">時間</th>
+          <th style="width: 30%;">プログラム・セッション</th>
+          <th style="width: 15%;">担当・講師</th>
+          <th style="width: 40%;">内容・ロールプレイへの直結ポイント</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>10:00 - 10:15</td><td>オープニング</td><td>趣旨説明・チーム分け・顧客ファーストの心得共有</td></tr>
-        <tr><td>10:15 - 11:00</td><td>【座学①】情報収集力＋AI活用</td><td>Dell公式ポータル群（羅針盤・ナレッジ・サポート等）＆ AI検索演習</td></tr>
-        <tr><td>11:00 - 12:15</td><td>【座学②】サイジング＆見積ドリル</td><td>PowerSizer（仮想環境・DRR試算）＆ DSC（BOM作成・構成）ハンズオン</td></tr>
-        <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
-        <tr><td>13:15 - 14:15</td><td>【ワークショップ】〇×比較表づくり</td><td>3つの顧客シナリオに合わせた「〇×比較表」作成（AI・ポータルフル活用）</td></tr>
-        <tr><td>14:15 - 14:25</td><td>休憩・ロープレ準備</td><td>作成した〇×表とPowerSizer構成を提案資料としてセット</td></tr>
-        <tr><td>14:25 - 15:45</td><td>【ロールプレイ大会】実戦提案バトル</td><td>3つの顧客シナリオ（仮想化・社内NAS散在・アニメ動画）への対抗提案実演</td></tr>
-        <tr><td>15:45 - 16:15</td><td>【講評・フィードバック】</td><td>講師・メンターからの即時レビュー、Live Optics誘導の模範トーク解説</td></tr>
-        <tr><td>16:15 - 16:45</td><td>【Microsoft Forms 小テスト】</td><td>全方位オープンブック型テスト（ポータル・PowerSizer・AI何でも検索OK！）</td></tr>
-        <tr><td>16:45 - 17:10</td><td>【デマジェン大作戦】成果物統合</td><td>〇×表のマージ＆ダウンロード資料化、明日からの案件創出アクション宣言</td></tr>
-        <tr><td>17:10 - 17:20</td><td>表彰式・エンディング</td><td>小テスト＆ロープレ優秀チーム表彰、記念撮影</td></tr>
+        <tr><td>10:00 - 10:15</td><td>オープニング ＆ 提案の心得</td><td>Dell営業 / 石山</td><td>趣旨説明・チーム分け・顧客ファーストの心得共有</td></tr>
+        <tr><td>10:15 - 10:45</td><td>【座学①】デル・テクノロジーズの歩き方</td><td><strong>純希 さん</strong></td><td>ポータル群（羅針盤/ナレッジ/サポート等）＆ AI検索テクニック</td></tr>
+        <tr><td>10:45 - 11:15</td><td>【座学②】Live Optics（無料診断）</td><td><strong>菅原 さん</strong></td><td>「実態不明」顧客への切り返し技・エージェントレス負荷可視化手法</td></tr>
+        <tr><td>11:15 - 11:45</td><td>【座学③】PowerSizer（サイジング実践）</td><td><strong>石山</strong></td><td>VM要件・4:1削減率（DRR）入力による最適構成の科学的算出</td></tr>
+        <tr><td>11:45 - 12:15</td><td>【座学④】DSC ハンズオン（構成見積）</td><td><strong>黒木 さん</strong></td><td>PowerSizer構成のBOM化、Anytime Upgrade等の必須オプション設定</td></tr>
+        <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>-</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
+        <tr><td>13:15 - 13:45</td><td>【座学⑤】PowerProtect DD（データ保護）</td><td><strong>力石 さん</strong></td><td>重複排除（平均65:1）・イミュータブル保管（野良NASウィルス対策）</td></tr>
+        <tr><td>13:45 - 14:35</td><td>【ワークショップ】〇×比較表づくり<br>（3チーム分担 ＋ ライトニング共有）</td><td>各班 ＆<br>メンター</td><td>3大シナリオ別に特化した顧客目線の〇×表作成 ＆ 相互レビュー</td></tr>
+        <tr><td>14:35 - 14:45</td><td>休憩・ロープレ準備</td><td>-</td><td>自作〇×表とPowerSizer構成を提案書としてセット</td></tr>
+        <tr><td>14:45 - 16:05</td><td>【ロールプレイ大会】実戦提案バトル</td><td>受講者 ＆<br>講師陣</td><td>3大シナリオ（仮想化・社内NAS散在・アニメ動画）顧客への提案実演</td></tr>
+        <tr><td>16:05 - 16:35</td><td>【講評・フィードバック】</td><td>講師陣全員</td><td>各班の良かった点・現場でさらに刺さる改善点のレビュー</td></tr>
+        <tr><td>16:35 - 17:00</td><td>【Microsoft Forms 小テスト】</td><td>運営</td><td>5大座学から出題（ポータル・ツール・AI何でも検索OK！）</td></tr>
+        <tr><td>17:00 - 17:20</td><td>【デマジェン大作戦】成果物統合・表彰</td><td>全体</td><td>3つの〇×表マージ計画、案件創出アクション宣言、表彰式</td></tr>
       </tbody>
     </table>
   </div>
@@ -731,20 +770,62 @@
     </table>
   </div>
 
-  <!-- SECTION 5: WORKSHOP -->
+  <!-- SECTION 5: WORKSHOP & RECOMMENDED PROCESS -->
   <div class="content-card" id="sec-workshop">
     <div class="section-heading">
-      <span>5. ワークショップ 〜 顧客目線の「NetApp対抗 〇×比較表」作成 〜</span>
+      <span>5. ワークショップ 〜 顧客目線の「〇×比較表」作成 ＆ 推奨の進め方 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>顧客が稟議を通す際に『客観的に見てどちらが自社に合っているか』を判断できる〇×表をチームで作成します。AIやポータルを検索しながら客観的な視点で埋めていきましょう。</p>
+
+    <!-- Team Discussion Directive Callout -->
+    <div class="callout-box callout-discuss">
+      <strong style="font-size: 9pt; color: #0076ce;">★ ワークショップでのチームディスカッションのお題：</strong><br>
+      <strong>「ワークショップでは、デル・テクノロジーズの製品であれば何を選定すべきか、そのうえで NetApp と比較し〇×表を作成し、最終的にチームで何を提案すべきなのか？を話し合ってください。」</strong>
+    </div>
+
+    <!-- Special Hook / Secret Message Callout -->
+    <div class="callout-box callout-secret">
+      <strong style="font-size: 9pt; color: #e36414;">★ ワークショップの特別ミッション（仕掛け）：</strong><br>
+      「じつは、３つのロールプレイシナリオのなかのひとつは <strong>"NetApp を提案した方がいいのではないか？"</strong> というものを埋め込んでいます。みなさんの嗅覚で提案するべき製品を選定し、うまくお客様をベストな状態に誘導してください。」
+    </div>
+
+    <div class="sub-heading">■ 〇×比較表の設計方針・作成ルール（顧客目線・メイデメ整理）</div>
+    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 8.5pt; margin-bottom: 12px;">
+      <ul style="margin: 0; padding-left: 18px;">
+        <li><strong>シナリオ1 ＆ 2（リプレース・統合案件）：</strong> 既存がNetAppのため、既存NetAppに対するDell対抗製品のメリット・デメリット（メイデメ）を挙げた上で〇×を作成。</li>
+        <li><strong>シナリオ3（新規動画基盤案件）：</strong> 全くの新規案件のため、<strong>「競合他社がNetAppを提案してきている」</strong>というコンペ状況を想定し、お客様目線で製品の何を比較したいのか？を想像して項目を設定・作成。</li>
+        <li><strong>補足説明のルール：</strong> 各項目で補足が必要なものについては、表の脚注に記載するか、補足があることを明確に記してロールプレイ時に口頭で丁寧な補足説明を実施してください。</li>
+      </ul>
+    </div>
+
+    <div class="sub-heading">■ ワークショップの推奨する進め方：『シナリオ連動・3チーム分担 ＋ クロス共有』方式</div>
+    <div class="step-container">
+      <div class="step-card">
+        <div class="step-num">Step 1: 課題別作成（35分）</div>
+        チームA（仮想化）、チームB（社内ファイル/野良NAS）、チームC（アニメ動画）に分かれ、Dell最適製品の選定・〇×表作成・提案方針を議論。
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2: 1分間ライトニング共有（10分）</div>
+        各班が「自慢のキラー項目」を1分で全体発表。他班の優れた着眼点を取り入れて自チームの表をさらにブラッシュアップ。
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3: ロープレで即実戦投入</div>
+        自作した熱々の〇×表を画面提示・配布し、顧客役へ対抗提案をプレゼンテーション。
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 4: 成果物マージ（デマジェン化）</div>
+        終了後、3つの表を1つに統合し『課題別ストレージ選定ホワイトペーパー』として完成！
+      </div>
+    </div>
+
+    <div class="sub-heading">■ 〇×比較表のフレームワーク（記入テンプレート例）</div>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 25%;">評価項目（顧客の関心事）</th>
-          <th style="width: 14%;">現行 NetApp</th>
+          <th style="width: 25%;">評価項目（顧客の関心事・比較軸）</th>
+          <th style="width: 14%;">NetApp（既存/競合提案）</th>
           <th style="width: 14%;">Dell 提案構成</th>
-          <th style="width: 47%;">顧客目線での解説・キラーメッセージ</th>
+          <th style="width: 47%;">顧客目線でのメリット・デメリット解説</th>
         </tr>
       </thead>
       <tbody>
@@ -752,13 +833,13 @@
           <td><strong>現状把握とサイジング</strong><br>（実態が不透明な状態）</td>
           <td><span class="badge-mark badge-mid">△</span> 顧客任せ・高額化</td>
           <td><span class="badge-mark badge-good">◎</span> Live Optics＋PowerSizer</td>
-          <td>「現状が見えなくても無償Live Opticsで精密診断し、過剰投資を防ぎます」</td>
+          <td>「現状が見えなくても無償Live Opticsで精密診断し、過剰投資を防ぎます」<span style="color:#0076ce;">※1</span></td>
         </tr>
         <tr>
           <td><strong>データ削減効果・実効容量</strong><br>（容量枯渇・不透明感）</td>
           <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・設定依存</td>
           <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証</td>
-          <td>「事前診断＋4:1削減保証で、無駄なドライブ追加コストを完全に排除」</td>
+          <td>「事前診断＋4:1削減保証で、無駄なドライブ追加コストを完全に排除」<span style="color:#0076ce;">※2</span></td>
         </tr>
         <tr>
           <td><strong>拡張性とパフォーマンス</strong><br>（高負荷レンダリング等）</td>
@@ -780,6 +861,9 @@
         </tr>
       </tbody>
     </table>
+    <div style="font-size: 7.5pt; color: #6c757d; margin-top: -6px; margin-bottom: 10px;">
+      ※1: Live Opticsはエージェントレスで数十分で測定可能。 ※2: 契約時に事前のワークロード確認に基づく保証レターを発行。
+    </div>
   </div>
 
   <!-- SECTION 6: ROLEPLAY SCENARIOS -->
@@ -791,7 +875,7 @@
 
     <!-- Scenario 1 -->
     <div class="scenario-card">
-      <div class="scenario-title">■ シナリオ①：既存 NetApp NFS を使った vSphere 仮想化基盤のリプレース</div>
+      <div class="scenario-title">■ シナリオ①（チームA担当）：既存 NetApp NFS を使った vSphere 仮想化基盤のリプレース</div>
       <p style="margin: 4px 0;">
         <strong>【顧客背景】</strong> 昨今のブロードコムショックによるコスト上昇を受け、来年6月の保守切れを機に新しく仮想化基盤を刷新したいと考えている。<br>
         <strong>【顧客状況】</strong> ゲストVMの詳細は認識しておらず、ざっくり50VMくらいでサイジングしてほしい。<br>
@@ -801,7 +885,7 @@
 
     <!-- Scenario 2 -->
     <div class="scenario-card">
-      <div class="scenario-title">■ シナリオ②：社内に点在する小規模ファイルサーバーの問題</div>
+      <div class="scenario-title">■ シナリオ②（チームB担当）：社内に点在する小規模ファイルサーバーの問題</div>
       <p style="margin: 4px 0;">
         <strong>【顧客背景】</strong> 現在4事業部にNetAppによるファイルサーバーを設置。そのうち3事業部で容量枯渇しそうだと現場から言われているが使用状況が見えていない（4事業部のうち2事業部にはITに明るい人がいるため、管理は任せている）。<br>
         <strong>【顧客状況】</strong> 3か月前、資材部にもファイルサーバーがあることが発覚。このファイルサーバーはバッファローのファイルサーバーで資材部の予算で購入したらしく会社のIT部門では管理していない。<br>
@@ -812,9 +896,10 @@
 
     <!-- Scenario 3 -->
     <div class="scenario-card">
-      <div class="scenario-title">■ シナリオ③：アニメーション会社の動画ファイルサーバー提案</div>
+      <div class="scenario-title">■ シナリオ③（チームC担当）：アニメーション会社の動画ファイルサーバー提案（新規コンペ）</div>
       <p style="margin: 4px 0;">
         <strong>【顧客背景】</strong> たくさんの動画ファイルを保存するためのファイルサーバーを探している。今後の業務提携や新しいビジネスへのチャレンジもあり、データ容量は増える可能性がある。<br>
+        <strong>【コンペ状況】</strong> 他社がNetAppを競合提案してきている。<br>
         <strong>【顧客要望】</strong> データは最重要なため、障害性に強い仕組みのあるファイルサーバーにしたい。データのアクセス頻度も高いためパフォーマンスも重要。本社にあるレンダリングサーバーがデータへの激しいI/Oが予想されるため、本社にファイルサーバーを設置したい。
       </p>
     </div>
@@ -843,7 +928,7 @@
       <span>7. 実践力腕試し！ Microsoft Forms 小テスト 〜 ツール・AI検索OK 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
-    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！『Dell Technologies の歩き方』で学んだ各種ポータル（羅針盤/ナレッジ/サポート/Info Hub等）、PowerSizer、DSC、そしてAIツールを使って素早く答えを導き出してください。</p>
+    <p>研修の総仕上げとして、Microsoft Formsによる小テストを実施します。<strong>【完全オープンブック形式】</strong>です！本日登壇された講師陣の座学（歩き方/Live Optics/PowerSizer/DSC/PowerProtect DD）、各種ポータル、そしてAIツールを使って素早く答えを導き出してください。</p>
     <table class="custom-table">
       <thead>
         <tr>
@@ -868,7 +953,7 @@
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <div style="font-size: 8.5pt;">
-      <p><strong>【成果物のホワイトペーパー化】</strong> 各チームが作成した〇×表をマージし、『【課題別】ストレージ選定・移行ガイド（仮想化刷新・ファイル統合・動画基盤）』としてPDFダウンロード資料を作成します。</p>
+      <p><strong>【成果物のホワイトペーパー化】</strong> 各チームが作成した3つの〇×表をマージし、『【課題別】ストレージ選定・移行ガイド（仮想化刷新・ファイル統合・動画基盤）』としてPDFダウンロード資料を作成します。</p>
       <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; margin-top: 8px;">
         <strong>◆ デマジェン実行ステップ（案件化ロードマップ）</strong>
         <ol style="margin: 6px 0 0 16px; padding: 0;">
@@ -888,7 +973,7 @@
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
     <div style="font-size: 8.5pt;">
-      <div style="margin-bottom: 4px;"><strong>【本日の気づき・学んだこと（AI活用・公式ポータル活用など）】</strong></div>
+      <div style="margin-bottom: 4px;"><strong>【本日の気づき・学んだこと（各座学のポイント・AI活用・顧客ファーストの視点など）】</strong></div>
       <div class="memo-area">自由記入欄</div>
 
       <div style="margin-bottom: 4px;"><strong>【明日から現場で実践するアクション（ターゲット顧客・アプローチ案）】</strong></div>
@@ -899,7 +984,6 @@
     </div>
   </div>
 </main>
-
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
