@@ -268,6 +268,12 @@
       border: 1px solid #bae6fd;
       border-left-width: 5px;
     }
+    .callout-rule {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #0076ce;
+      color: #1e293b;
+    }
 
     /* Compact Tables */
     .custom-table {
@@ -450,7 +456,7 @@
       <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール一覧</a>
       <a href="#sec-products" class="toc-btn">4. 主要8製品ポートフォリオ</a>
       <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク（7大観点）</a>
-      <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ（ロープレ）</a>
+      <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ＆ロープレ</a>
       <a href="#sec-quiz" class="toc-btn">7. Forms 小テスト</a>
       <a href="#sec-demagen" class="toc-btn">8. デマジェン大作戦</a>
       <a href="#sec-memo" class="toc-btn">9. 振り返りシート</a>
@@ -497,11 +503,11 @@
         <tr><td>10:45 - 11:15</td><td>【座学②】Live Optics（無料診断）</td><td><strong>菅原 さん</strong></td><td>「実態不明」顧客への切り返し技・エージェントレス負荷可視化手法</td></tr>
         <tr><td>11:15 - 11:45</td><td>【座学③】PowerSizer（サイジング実践）</td><td><strong>石山</strong></td><td>VM要件・4:1削減率（DRR）入力による最適構成の科学的算出</td></tr>
         <tr><td>11:45 - 12:15</td><td>【座学④】DSC ハンズオン（構成見積）</td><td><strong>黒木 さん</strong></td><td>PowerSizer構成のBOM化、Anytime Upgrade等の必須オプション設定</td></tr>
-        <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>-</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
-        <tr><td>13:15 - 13:45</td><td>【座学⑤】PowerProtect DD（データ保護）</td><td><strong>力石 さん</strong></td><td>重複排除（平均65:1）・イミュータブル保管（野良NASウィルス対策）</td></tr>
+        <tr><td>12:15 - 12:45</td><td>【座学⑤】PowerProtect DD（データ保護）</td><td><strong>力石 さん</strong></td><td>重複排除（平均65:1）・イミュータブル保管（野良NASウィルス対策）</td></tr>
+        <tr><td>12:45 - 13:45</td><td>お昼休み・作戦会議</td><td>-</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
         <tr><td>13:45 - 14:35</td><td>【ワークショップ】〇×比較表づくり<br>（分担作成・共有・再検討・磨き上げ）</td><td>各班 ＆<br>メンター</td><td>7大観点から特化表作成 ＆ 再検討による提案書ブラッシュアップ</td></tr>
-        <tr><td>14:35 - 14:45</td><td>休憩・ロープレ準備</td><td>-</td><td>自作〇×表とPowerSizer構成を提案書としてセット</td></tr>
-        <tr><td>14:45 - 16:05</td><td>【ロールプレイ大会】実戦提案バトル</td><td>受講者 ＆<br>講師陣</td><td>3大シナリオ（仮想化・社内NAS散在・アニメ動画）顧客への提案実演</td></tr>
+        <tr><td>14:35 - 14:45</td><td>休憩・ロープレ準備</td><td>-</td><td>自作〇×表と構成案・Next Actionゴールを提案書としてセット</td></tr>
+        <tr><td>14:45 - 16:05</td><td>【ロールプレイ大会】実戦提案バトル<br>（代表2名 vs 純希＆石山）</td><td>受講者 ＆<br>純希・石山</td><td>10分本番＋2分雑談でNext ActionへのYes獲得を目指す（各班）</td></tr>
         <tr><td>16:05 - 16:35</td><td>【講評・フィードバック】</td><td>講師陣全員</td><td>各班の良かった点・現場でさらに刺さる改善点のレビュー</td></tr>
         <tr><td>16:35 - 17:00</td><td>【Microsoft Forms 小テスト】</td><td>運営</td><td>5大座学から出題（ポータル・ツール・AI何でも検索OK！）</td></tr>
         <tr><td>17:00 - 17:20</td><td>【デマジェン大作戦】成果物統合・表彰</td><td>全体</td><td>3つの〇×表マージ計画、案件創出アクション宣言、表彰式</td></tr>
@@ -875,11 +881,21 @@
     </div>
   </div>
 
-  <!-- SECTION 6: ROLEPLAY SCENARIOS -->
+  <!-- SECTION 6: ROLEPLAY SCENARIOS & REVISED RUBRIC -->
   <div class="content-card" id="sec-roleplay">
     <div class="section-heading">
-      <span>6. ロールプレイ対決 〜 実戦3大シナリオ 〜</span>
+      <span>6. ロールプレイ対決 〜 実戦3大シナリオ ＆ 実施ルール 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
+    </div>
+
+    <!-- Roleplay Execution Rules Callout -->
+    <div class="callout-box callout-rule">
+      <strong style="color: #0076ce; font-size: 9pt;">【ロールプレイ実施ルール ＆ 対戦形式】</strong><br>
+      ・<strong>【提案者】：</strong> 各チームの代表2名<br>
+      ・<strong>【お客様役】：</strong> <strong>田中純希 ＆ 石山啓一</strong>（顧客カルテになりきってリアルに応対）<br>
+      ・<strong>【事前の狙い】：</strong> 事前情報を踏まえ、各チームで提案時のゴール（<strong>Next Action</strong>）を明確に定めて挑む。<br>
+      ・<strong>【制限時間】：</strong> <strong>10分／チーム</strong>。短時間でお客様から Next Action への「Yes」を引き出す！<br>
+      ・<strong>【雑談タイム（2分間）】：</strong> プレゼン終了後、<strong>会議室からエレベーターに乗るまでの間の時間</strong>を想定した2分間を確保。距離を縮めるトークや追加情報の引き出しに使っても、そのまま見送られて終了でも自由です。
     </div>
 
     <!-- Scenario 1 -->
@@ -913,20 +929,36 @@
       </p>
     </div>
 
-    <div class="sub-heading">■ 審査ルーブリック（100点満点）</div>
+    <div class="sub-heading">■ 審査ルーブリック（100点満点：本質的な営業技術提案力を評価）</div>
     <table class="custom-table">
       <thead>
         <tr>
           <th style="width: 25%;">評価項目</th>
           <th style="width: 15%;">配点</th>
-          <th style="width: 60%;">合格基準（顧客ファーストの提案ができているか）</th>
+          <th style="width: 60%;">評価の着眼点・審査基準</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><strong>顧客ファーストの傾聴＆Live Optics誘導</strong></td><td>25点</td><td>実態不明や不安に対し、無理に売り込まず無償Live Optics診断を誠実に提案できたか。</td></tr>
-        <tr><td><strong>客観的な〇×比較表の活用</strong></td><td>25点</td><td>自作〇×表を提示し、NetAppの良さも認めつつ顧客メリットを論理的に説明できたか。</td></tr>
-        <tr><td><strong>製品構成の妥当性 (PowerSizer/DSC活用)</strong></td><td>25点</td><td>主要8製品からシナリオに合致した最適な製品を選定し、選定理由を語れたか。</td></tr>
-        <tr><td><strong>営業・SEの連携＆クロージング</strong></td><td>25点</td><td>営業とSEの息が合い、顧客の不安を払拭して「診断実施・次回提案」の合意を得られたか。</td></tr>
+        <tr>
+          <td><strong>現状把握 ＆<br>アセスメント手法</strong></td>
+          <td>25点</td>
+          <td>どのような手段にせよ、お客様の現状（実効負荷・容量・構成）をどれだけ細かく正確に把握・アセスできるか？そのアプローチ手法の妥当性と説得力を評価。</td>
+        </tr>
+        <tr>
+          <td><strong>〇×比較表の訴求力<br>＆ メリット提示</strong></td>
+          <td>25点</td>
+          <td>10分という限られた短い時間の中で、どれだけお客様の課題に深く響く項目をうまくメリット（メリデメ）とともに分かりやすく説明できたかを評価。</td>
+        </tr>
+        <tr>
+          <td><strong>提案構成の妥当性 ＆<br>サイジング根拠</strong></td>
+          <td>25点</td>
+          <td>特定のツール名に囚われず、提案チームがどのような手法・論理的根拠で機器構成やサイジングを導き出したか、その構成の妥当性を評価。</td>
+        </tr>
+        <tr>
+          <td><strong>関係構築・情報引き出し<br>＆ Next Action獲得</strong></td>
+          <td>25点</td>
+          <td>商談全体（およびエレベーターまでの2分間の雑談含む）を通じ、お客様の懐に潜り込み「いいね」を引き出せたか。本音を引き出しNext ActionへのYesを獲得できたかを評価。</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -948,9 +980,9 @@
       </thead>
       <tbody>
         <tr><td><strong>情報ポータル活用力</strong><br>(羅針盤/ナレッジ/サポート)</td><td>適切なポータルから正確な公式情報を素早く見つけられるか</td><td>「サポートサイトで特定サービスタグの機器構成や最新管理者ガイドを検索せよ」</td></tr>
-        <tr><td><strong>PowerSizer / DSC<br>実践サイジング力</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB時、PowerStoreで4:1削減適用時の必要物理容量を算出せよ」</td></tr>
-        <tr><td><strong>製品選定＆競合対抗<br>（顧客ファースト）</strong></td><td>3大シナリオ（仮想化・社内ファイルサーバー・動画）の最適解を語れるか</td><td>「レンダリングサーバーからの激しいI/Oに耐えるスケールアウトNAS製品とその理由は？」</td></tr>
-        <tr><td><strong>データ保護＆セキュリティ<br>ポートフォリオ理解</strong></td><td>Data Domain等のイミュータブル保護やバックアップ統合を理解しているか</td><td>「野良NASウィルス事件に対し、Data Domainで実現できる不変保護機能の名称は？」</td></tr>
+        <tr><td><strong>サイジング ＆ 見積力<br>（実践サイジング）</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB時、PowerStoreで4:1削減適用時の必要物理容量を算出せよ」</td></tr>
+        <tr><td><strong>製品選定 ＆ 競合対抗<br>（顧客ファースト）</strong></td><td>3大シナリオ（仮想化・社内ファイルサーバー・動画）の最適解を語れるか</td><td>「レンダリングサーバーからの激しいI/Oに耐えるスケールアウトNAS製品とその理由は？」</td></tr>
+        <tr><td><strong>データ保護 ＆ セキュリティ<br>ポートフォリオ理解</strong></td><td>イミュータブル保護やバックアップ統合を理解しているか</td><td>「野良NASウィルス事件に対し、Data Domainで実現できる不変保護機能の名称は？」</td></tr>
       </tbody>
     </table>
   </div>
@@ -967,8 +999,8 @@
         <strong>◆ デマジェン実行ステップ（案件化ロードマップ）</strong>
         <ol style="margin: 6px 0 0 16px; padding: 0;">
           <li><strong>リード獲得：</strong> 丸紅情報様Webサイトおよび情シス向けメルマガで資料DL案内を展開。</li>
-          <li><strong>フォローコール：</strong> DL顧客へワークショップ受講者が架電（「Live Optics無償診断」のご案内）。</li>
-          <li><strong>最適提案：</strong> 実データをもとにPowerSizerでサイジング・DSCで見積提示。</li>
+          <li><strong>フォローコール：</strong> DL顧客へワークショップ受講者が架電（「無償診断サービス」のご案内）。</li>
+          <li><strong>最適提案：</strong> 実データをもとに最適構成・見積提示。</li>
           <li><strong>案件化：</strong> 3か月後KPI（3件以上の案件化）を達成！</li>
         </ol>
       </div>
@@ -993,7 +1025,6 @@
     </div>
   </div>
 </main>
-
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
