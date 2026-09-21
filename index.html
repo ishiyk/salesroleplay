@@ -341,7 +341,7 @@
     /* Workflow Step Box */
     .step-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 10px;
       margin-bottom: 12px;
     }
@@ -449,7 +449,7 @@
       <a href="#sec-schedule" class="toc-btn">2. タイムテーブル＆講師</a>
       <a href="#sec-tools" class="toc-btn">3. 装備・ポータル・ツール一覧</a>
       <a href="#sec-products" class="toc-btn">4. 主要8製品ポートフォリオ</a>
-      <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク＆進め方</a>
+      <a href="#sec-workshop" class="toc-btn">5. 〇×比較表ワーク（7大観点）</a>
       <a href="#sec-roleplay" class="toc-btn">6. 実戦3大シナリオ（ロープレ）</a>
       <a href="#sec-quiz" class="toc-btn">7. Forms 小テスト</a>
       <a href="#sec-demagen" class="toc-btn">8. デマジェン大作戦</a>
@@ -499,7 +499,7 @@
         <tr><td>11:45 - 12:15</td><td>【座学④】DSC ハンズオン（構成見積）</td><td><strong>黒木 さん</strong></td><td>PowerSizer構成のBOM化、Anytime Upgrade等の必須オプション設定</td></tr>
         <tr><td>12:15 - 13:15</td><td>お昼休み・作戦会議</td><td>-</td><td>ランチ＆チームビルディング（リラックスした雰囲気づくり）</td></tr>
         <tr><td>13:15 - 13:45</td><td>【座学⑤】PowerProtect DD（データ保護）</td><td><strong>力石 さん</strong></td><td>重複排除（平均65:1）・イミュータブル保管（野良NASウィルス対策）</td></tr>
-        <tr><td>13:45 - 14:35</td><td>【ワークショップ】〇×比較表づくり<br>（3チーム分担 ＋ ライトニング共有）</td><td>各班 ＆<br>メンター</td><td>3大シナリオ別に特化した顧客目線の〇×表作成 ＆ 相互レビュー</td></tr>
+        <tr><td>13:45 - 14:35</td><td>【ワークショップ】〇×比較表づくり<br>（分担作成・共有・再検討・磨き上げ）</td><td>各班 ＆<br>メンター</td><td>7大観点から特化表作成 ＆ 再検討による提案書ブラッシュアップ</td></tr>
         <tr><td>14:35 - 14:45</td><td>休憩・ロープレ準備</td><td>-</td><td>自作〇×表とPowerSizer構成を提案書としてセット</td></tr>
         <tr><td>14:45 - 16:05</td><td>【ロールプレイ大会】実戦提案バトル</td><td>受講者 ＆<br>講師陣</td><td>3大シナリオ（仮想化・社内NAS散在・アニメ動画）顧客への提案実演</td></tr>
         <tr><td>16:05 - 16:35</td><td>【講評・フィードバック】</td><td>講師陣全員</td><td>各班の良かった点・現場でさらに刺さる改善点のレビュー</td></tr>
@@ -770,10 +770,10 @@
     </table>
   </div>
 
-  <!-- SECTION 5: WORKSHOP & RECOMMENDED PROCESS -->
+  <!-- SECTION 5: WORKSHOP & 7 KEY CATEGORIES TEMPLATE -->
   <div class="content-card" id="sec-workshop">
     <div class="section-heading">
-      <span>5. ワークショップ 〜 顧客目線の「〇×比較表」作成 ＆ 推奨の進め方 〜</span>
+      <span>5. ワークショップ 〜 顧客目線の「〇×比較表」作成 ＆ 7大観点テンプレート 〜</span>
       <a href="#sec-cover" class="jump-top">▲ 目次へ</a>
     </div>
 
@@ -789,80 +789,89 @@
       「じつは、３つのロールプレイシナリオのなかのひとつは <strong>"NetApp を提案した方がいいのではないか？"</strong> というものを埋め込んでいます。みなさんの嗅覚で提案するべき製品を選定し、うまくお客様をベストな状態に誘導してください。」
     </div>
 
-    <div class="sub-heading">■ 〇×比較表の設計方針・作成ルール（顧客目線・メイデメ整理）</div>
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 8.5pt; margin-bottom: 12px;">
-      <ul style="margin: 0; padding-left: 18px;">
-        <li><strong>シナリオ1 ＆ 2（リプレース・統合案件）：</strong> 既存がNetAppのため、既存NetAppに対するDell対抗製品のメリット・デメリット（メイデメ）を挙げた上で〇×を作成。</li>
-        <li><strong>シナリオ3（新規動画基盤案件）：</strong> 全くの新規案件のため、<strong>「競合他社がNetAppを提案してきている」</strong>というコンペ状況を想定し、お客様目線で製品の何を比較したいのか？を想像して項目を設定・作成。</li>
-        <li><strong>補足説明のルール：</strong> 各項目で補足が必要なものについては、表の脚注に記載するか、補足があることを明確に記してロールプレイ時に口頭で丁寧な補足説明を実施してください。</li>
-      </ul>
-    </div>
+    <div class="sub-heading">■ 〇×比較表の7大評価観点テンプレート（提案直結項目）</div>
+    <p style="font-size: 8.5pt; margin-top: 0;">以下の7つのサブタイトルから細かい機能・性能、コスト比較範囲、次期リプレース等の観点を取り入れ、提案に繋がる項目を絞り込んでいます。</p>
 
-    <div class="sub-heading">■ ワークショップの推奨する進め方：『シナリオ連動・3チーム分担 ＋ クロス共有』方式</div>
-    <div class="step-container">
-      <div class="step-card">
-        <div class="step-num">Step 1: 課題別作成（35分）</div>
-        チームA（仮想化）、チームB（社内ファイル/野良NAS）、チームC（アニメ動画）に分かれ、Dell最適製品の選定・〇×表作成・提案方針を議論。
-      </div>
-      <div class="step-card">
-        <div class="step-num">Step 2: 1分間ライトニング共有（10分）</div>
-        各班が「自慢のキラー項目」を1分で全体発表。他班の優れた着眼点を取り入れて自チームの表をさらにブラッシュアップ。
-      </div>
-      <div class="step-card">
-        <div class="step-num">Step 3: ロープレで即実戦投入</div>
-        自作した熱々の〇×表を画面提示・配布し、顧客役へ対抗提案をプレゼンテーション。
-      </div>
-      <div class="step-card">
-        <div class="step-num">Step 4: 成果物マージ（デマジェン化）</div>
-        終了後、3つの表を1つに統合し『課題別ストレージ選定ホワイトペーパー』として完成！
-      </div>
-    </div>
-
-    <div class="sub-heading">■ 〇×比較表のフレームワーク（記入テンプレート例）</div>
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 25%;">評価項目（顧客の関心事・比較軸）</th>
-          <th style="width: 14%;">NetApp（既存/競合提案）</th>
-          <th style="width: 14%;">Dell 提案構成</th>
-          <th style="width: 47%;">顧客目線でのメリット・デメリット解説</th>
+          <th style="width: 25%;">観点 / 比較項目</th>
+          <th style="width: 15%;">NetApp（既存/競合）</th>
+          <th style="width: 15%;">Dell 提案構成</th>
+          <th style="width: 45%;">顧客目線でのメリデメ解説 ＆ 提案ポイント</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>現状把握とサイジング</strong><br>（実態が不透明な状態）</td>
-          <td><span class="badge-mark badge-mid">△</span> 顧客任せ・高額化</td>
-          <td><span class="badge-mark badge-good">◎</span> Live Optics＋PowerSizer</td>
-          <td>「現状が見えなくても無償Live Opticsで精密診断し、過剰投資を防ぎます」<span style="color:#0076ce;">※1</span></td>
+          <td><strong>① 初期導入作業</strong><br>・現状サイジング<br>・導入設定の容易性</td>
+          <td><span class="badge-mark badge-mid">△</span> 詳細サイジング顧客任せ<br>ONTAP設計の複雑さ</td>
+          <td><span class="badge-mark badge-good">◎</span> Live Optics無料診断<br>最短数十分の簡単初期設定</td>
+          <td>「実態不明でもLive Opticsで即座に可視化。初期設定もシンプルで工数を削減」<span style="color:#0076ce;">※1</span></td>
         </tr>
         <tr>
-          <td><strong>データ削減効果・実効容量</strong><br>（容量枯渇・不透明感）</td>
-          <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・設定依存</td>
-          <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証</td>
-          <td>「事前診断＋4:1削減保証で、無駄なドライブ追加コストを完全に排除」<span style="color:#0076ce;">※2</span></td>
+          <td><strong>② 運用</strong><br>・VMware統合/管理<br>・ファイル共有管理</td>
+          <td><span class="badge-mark badge-mid">◯</span> 機能豊富だが<br>管理・運用が属人化しやすい</td>
+          <td><span class="badge-mark badge-good">◎</span> vVols完全統合<br>CloudIQによる一元可視化</td>
+          <td>「vCenterからVM単位で直感管理。CloudIQによるプロアクティブなAI監視で運用負荷を半減」</td>
         </tr>
         <tr>
-          <td><strong>拡張性とパフォーマンス</strong><br>（高負荷レンダリング等）</td>
-          <td><span class="badge-mark badge-mid">△</span> コントローラ上限の壁</td>
-          <td><span class="badge-mark badge-good">◎</span> PowerScale (スケールアウト)</td>
-          <td>「ノード追加だけで容量と性能がリニアに拡張。単一ボリュームで管理も楽」</td>
+          <td><strong>③ 保守性</strong><br>・コード更新/パッチ<br>・部品交換の無停止性</td>
+          <td><span class="badge-mark badge-mid">△</span> ONTAP更新時の事前検証や<br>フェイルオーバー負荷大</td>
+          <td><span class="badge-mark badge-good">◎</span> 無停止OSアップデート<br>ProSupport Plus自動通報</td>
+          <td>「PowerStore/PowerScaleともに無停止アップデートを標準担保。障害時も自動パーツ手配」</td>
         </tr>
         <tr>
-          <td><strong>コスト・初期導入費用</strong><br>（低予算・シンプル志向）</td>
-          <td><span class="badge-mark badge-mid">△</span> 多機能で高価格帯</td>
-          <td><span class="badge-mark badge-good">◎</span> PowerVault ME5</td>
-          <td>「運用に手間がかかっても初期費用を抑えたい用途には圧倒的高コスパ」</td>
+          <td><strong>④ 堅牢性・冗長性</strong><br>・ランサムウェア対策<br>・耐障害・不変保管</td>
+          <td><span class="badge-mark badge-mid">△</span> 機能ごとに別ライセンスや<br>設定の複雑さあり</td>
+          <td><span class="badge-mark badge-good">◎</span> Data Domainイミュータブル<br>PowerScale高耐障害OneFS</td>
+          <td>「Data Domainの不変保管（Retention Lock）で野良NASウィルス・ランサム被害から完全隔離」<span style="color:#0076ce;">※2</span></td>
         </tr>
         <tr>
-          <td><strong>将来の更改・データ移行</strong><br>（次期更新プロジェクト）</td>
-          <td><span class="badge-mark badge-bad">×</span> 大規模移行PJ要</td>
-          <td><span class="badge-mark badge-good">◎</span> Anytime Upgrade</td>
-          <td>「次回更改は無停止コントローラ交換。データ移行の手間とコストをゼロに」</td>
+          <td><strong>⑤ パフォーマンス</strong><br>・I/Oスループット<br>・拡張時レイテンシ</td>
+          <td><span class="badge-mark badge-mid">△</span> コントローラ負荷上限や<br>プロトコルオーバーヘッド</td>
+          <td><span class="badge-mark badge-good">◎</span> エンドツーエンドNVMe<br>PowerScale単一分散処理</td>
+          <td>「アニメ動画やレンダリングの激しいI/Oも、PowerScaleのスケールアウトOneFSで帯域上限なし」</td>
+        </tr>
+        <tr>
+          <td><strong>⑥ コスト</strong><br>・初期導入ドライブ費用<br>・データ削減率保証</td>
+          <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・高単価<br>ライセンス体系が複雑</td>
+          <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証 (DRR)<br>PowerVault ME5の圧倒的安さ</td>
+          <td>「Windows/Linux混在でも4:1容量削減を契約保証。低予算要望にはME5で圧倒的コストカット」<span style="color:#0076ce;">※3</span></td>
+        </tr>
+        <tr>
+          <td><strong>⑦ ライフサイクル</strong><br>・5年後データ移行<br>・次期リプレース負荷</td>
+          <td><span class="badge-mark badge-bad">×</span> 次期更改時に大規模な<br>データ移行プロジェクト要</td>
+          <td><span class="badge-mark badge-good">◎</span> Anytime Upgrade<br>シームレスなノード追加</td>
+          <td>「Anytime Upgradeにより、5年後もデータ移行不要で最新コントローラへ無停止刷新が可能」</td>
         </tr>
       </tbody>
     </table>
-    <div style="font-size: 7.5pt; color: #6c757d; margin-top: -6px; margin-bottom: 10px;">
-      ※1: Live Opticsはエージェントレスで数十分で測定可能。 ※2: 契約時に事前のワークロード確認に基づく保証レターを発行。
+    <div style="font-size: 7.5pt; color: #6c757d; margin-top: -6px; margin-bottom: 12px;">
+      ※1: Live Opticsはエージェントレス。 ※2: Data DomainのRetention Lock機能。 ※3: 事前アセスメントに基づく4:1保証レター発行。
+    </div>
+
+    <div class="sub-heading">■ ワークショップの進め方：『シナリオ連動・3チーム分担 ＋ 共有・再検討』方式</div>
+    <div class="step-container">
+      <div class="step-card">
+        <div class="step-num">Step 1: 課題別作成（30分）</div>
+        チームA（仮想化）、チームB（社内ファイル/野良NAS）、チームC（アニメ動画）に分かれ、上記7大観点からDell最適製品選定・〇×表作成・提案方針を議論。
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2: 1分共有（10分）</div>
+        各班がキラー項目を発表し、他班の優れた着眼点や考え方をインプット。
+      </div>
+      <div class="step-card" style="border-top-color: #e36414; background: #fffdfa;">
+        <div class="step-num" style="color: #e36414;">Step 3: 再度〇×を検討（10分）</div>
+        他のチームからの考え方を吸収し自チームの〇×表に活かし、提案書に活かせるものへブラッシュアップ！
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 4: ロープレ実戦</div>
+        磨き上げた表を武器に顧客役へ対抗提案をプレゼンテーション。
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 5: 成果物マージ</div>
+        終了後、3つの表を統合し『課題別ストレージ選定ホワイトペーパー』として完成！
+      </div>
     </div>
   </div>
 
@@ -984,6 +993,7 @@
     </div>
   </div>
 </main>
+
 
   <script>
     // パスワード "Password123!" の SHA-256 ハッシュ値
