@@ -299,16 +299,6 @@
     .custom-table tr:nth-child(even) {
       background-color: #fbfcfe;
     }
-    .badge-mark {
-      display: inline-block;
-      font-weight: bold;
-      padding: 1px 6px;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .badge-good { background: #d4edda; color: #155724; }
-    .badge-mid  { background: #fff3cd; color: #856404; }
-    .badge-bad  { background: #f8d7da; color: #721c24; }
 
     /* Auth Badge / Link Styling */
     .badge-auth {
@@ -515,7 +505,7 @@
     </table>
   </div>
 
-  <!-- SECTION 3: TOOLS & PORTALS (LINKS + AUTH BADGES + DETAILED LEGEND) -->
+  <!-- SECTION 3: TOOLS & PORTALS -->
   <div class="content-card" id="sec-tools">
     <div class="section-heading">
       <span>3. 冒険の装備と情報源 〜 Dell Technologies 公式ポータル ＆ ツール一覧 〜</span>
@@ -776,7 +766,7 @@
     </table>
   </div>
 
-  <!-- SECTION 5: WORKSHOP & 7 KEY CATEGORIES TEMPLATE -->
+  <!-- SECTION 5: WORKSHOP & 7 KEY CATEGORIES TEMPLATE (REVISED TO 3 COLUMNS) -->
   <div class="content-card" id="sec-workshop">
     <div class="section-heading">
       <span>5. ワークショップ 〜 顧客目線の「〇×比較表」作成 ＆ 7大観点テンプレート 〜</span>
@@ -796,59 +786,72 @@
     </div>
 
     <div class="sub-heading">■ 〇×比較表の7大評価観点テンプレート（提案直結項目）</div>
-    <p style="font-size: 8.5pt; margin-top: 0;">以下の7つのサブタイトルから細かい機能・性能、コスト比較範囲、次期リプレース等の観点を取り入れ、提案に繋がる項目を絞り込んでいます。</p>
+    <p style="font-size: 8.5pt; margin-top: 0;">以下の7つの大観点から細かい機能・性能、コスト比較範囲、次期リプレース等の具体項目を整理したテンプレートです。</p>
 
     <table class="custom-table">
       <thead>
         <tr>
-          <th style="width: 25%;">観点 / 比較項目</th>
-          <th style="width: 15%;">NetApp（既存/競合）</th>
-          <th style="width: 15%;">Dell 提案構成</th>
-          <th style="width: 45%;">顧客目線でのメリデメ解説 ＆ 提案ポイント</th>
+          <th style="width: 20%;">観点（大項目）</th>
+          <th style="width: 25%;">比較項目（具体項目）</th>
+          <th style="width: 55%;">顧客目線でのメリデメ解説 ＆ 提案ポイント</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>① 初期導入作業</strong><br>・現状サイジング<br>・導入設定の容易性</td>
-          <td><span class="badge-mark badge-mid">△</span> 詳細サイジング顧客任せ<br>ONTAP設計の複雑さ</td>
-          <td><span class="badge-mark badge-good">◎</span> Live Optics無料診断<br>最短数十分の簡単初期設定</td>
-          <td>「実態不明でもLive Opticsで即座に可視化。初期設定もシンプルで工数を削減」<span style="color:#0076ce;">※1</span></td>
+          <td><strong>① 初期導入作業</strong></td>
+          <td>・現状サイジングの容易性<br>・導入設定の工数・期間</td>
+          <td>
+            <strong>【NetApp】</strong> 詳細サイジングが顧客任せになりがちでONTAP設計の工数が大きい。<br>
+            <strong>【Dell】</strong> Live Opticsで実負荷を即座に無料可視化。初期設定もシンプルで導入工数を大幅削減。<span style="color:#0076ce;">※1</span>
+          </td>
         </tr>
         <tr>
-          <td><strong>② 運用</strong><br>・VMware統合/管理<br>・ファイル共有管理</td>
-          <td><span class="badge-mark badge-mid">◯</span> 機能豊富だが<br>管理・運用が属人化しやすい</td>
-          <td><span class="badge-mark badge-good">◎</span> vVols完全統合<br>CloudIQによる一元可視化</td>
-          <td>「vCenterからVM単位で直感管理。CloudIQによるプロアクティブなAI監視で運用負荷を半減」</td>
+          <td><strong>② 運用</strong></td>
+          <td>・VMware統合管理<br>・ファイル共有管理の直感性</td>
+          <td>
+            <strong>【NetApp】</strong> 機能は豊富だがONTAP専用CLI/GUI等での運用が属人化しやすい。<br>
+            <strong>【Dell】</strong> vVols完全統合によりvCenterからVM単位で直感管理。CloudIQのAI監視で障害予兆検知・運用負荷半減。
+          </td>
         </tr>
         <tr>
-          <td><strong>③ 保守性</strong><br>・コード更新/パッチ<br>・部品交換の無停止性</td>
-          <td><span class="badge-mark badge-mid">△</span> ONTAP更新時の事前検証や<br>フェイルオーバー負荷大</td>
-          <td><span class="badge-mark badge-good">◎</span> 無停止OSアップデート<br>ProSupport Plus自動通報</td>
-          <td>「PowerStore/PowerScaleともに無停止アップデートを標準担保。障害時も自動パーツ手配」</td>
+          <td><strong>③ 保守性</strong></td>
+          <td>・コード更新/パッチ適用<br>・部品交換の無停止性</td>
+          <td>
+            <strong>【NetApp】</strong> ONTAP更新時の事前検証負荷やフェイルオーバー時の影響検討が必要。<br>
+            <strong>【Dell】</strong> PowerStore/PowerScaleともに無停止OSアップデートを標準担保。ProSupport Plusによる自動パーツ手配・障害通報。
+          </td>
         </tr>
         <tr>
-          <td><strong>④ 堅牢性・冗長性</strong><br>・ランサムウェア対策<br>・耐障害・不変保管</td>
-          <td><span class="badge-mark badge-mid">△</span> 機能ごとに別ライセンスや<br>設定の複雑さあり</td>
-          <td><span class="badge-mark badge-good">◎</span> Data Domainイミュータブル<br>PowerScale高耐障害OneFS</td>
-          <td>「Data Domainの不変保管（Retention Lock）で野良NASウィルス・ランサム被害から完全隔離」<span style="color:#0076ce;">※2</span></td>
+          <td><strong>④ 堅牢性・冗長性</strong></td>
+          <td>・ランサムウェア・ウィルス対策<br>・耐障害性・不変保管</td>
+          <td>
+            <strong>【NetApp】</strong> 機能ごとに別ライセンスや追加設計が必要になるケースがある。<br>
+            <strong>【Dell】</strong> PowerProtect DDの不変保管（Retention Lock）で野良NASウィルス・ランサム被害から完全隔離。PowerScaleのOneFS高耐障害性。<span style="color:#0076ce;">※2</span>
+          </td>
         </tr>
         <tr>
-          <td><strong>⑤ パフォーマンス</strong><br>・I/Oスループット<br>・拡張時レイテンシ</td>
-          <td><span class="badge-mark badge-mid">△</span> コントローラ負荷上限や<br>プロトコルオーバーヘッド</td>
-          <td><span class="badge-mark badge-good">◎</span> エンドツーエンドNVMe<br>PowerScale単一分散処理</td>
-          <td>「アニメ動画やレンダリングの激しいI/Oも、PowerScaleのスケールアウトOneFSで帯域上限なし」</td>
+          <td><strong>⑤ パフォーマンス</strong></td>
+          <td>・I/Oスループット性能<br>・拡張時の低レイテンシ維持</td>
+          <td>
+            <strong>【NetApp】</strong> コントローラ性能上限やプロトコル混在時のオーバーヘッドに配慮が必要。<br>
+            <strong>【Dell】</strong> エンドツーエンドNVMeの高速処理に加え、PowerScaleのスケールアウトOneFSによりノード追加で帯域・性能をリニア拡張。
+          </td>
         </tr>
         <tr>
-          <td><strong>⑥ コスト</strong><br>・初期導入ドライブ費用<br>・データ削減率保証</td>
-          <td><span class="badge-mark badge-mid">△</span> 実効容量ブレ・高単価<br>ライセンス体系が複雑</td>
-          <td><span class="badge-mark badge-good">◎</span> 4:1データ削減保証 (DRR)<br>PowerVault ME5の圧倒的安さ</td>
-          <td>「Windows/Linux混在でも4:1容量削減を契約保証。低予算要望にはME5で圧倒的コストカット」<span style="color:#0076ce;">※3</span></td>
+          <td><strong>⑥ コスト</strong></td>
+          <td>・初期導入ドライブ費用<br>・データ削減率の契約保証</td>
+          <td>
+            <strong>【NetApp】</strong> 実効容量見積もりのブレやライセンス体系の複雑化で初期費用が嵩みやすい。<br>
+            <strong>【Dell】</strong> 4:1データ削減保証（DRR）で実質容量単価を抑制。低予算要望にはPowerVault ME5で圧倒的コストカット。<span style="color:#0076ce;">※3</span>
+          </td>
         </tr>
         <tr>
-          <td><strong>⑦ ライフサイクル</strong><br>・5年後データ移行<br>・次期リプレース負荷</td>
-          <td><span class="badge-mark badge-bad">×</span> 次期更改時に大規模な<br>データ移行プロジェクト要</td>
-          <td><span class="badge-mark badge-good">◎</span> Anytime Upgrade<br>シームレスなノード追加</td>
-          <td>「Anytime Upgradeにより、5年後もデータ移行不要で最新コントローラへ無停止刷新が可能」</td>
+          <td><strong>⑦ ライフサイクル</strong></td>
+          <td>・5年後データ移行の負荷<br>・次期リプレース時の刷新性</td>
+          <td>
+            <strong>【NetApp】</strong> 次期更改時に大規模なデータ移行・環境再設計プロジェクトが必要になりがち。<br>
+            <strong>【Dell】</strong> Anytime Upgradeにより、5年後もデータ移行不要で最新コントローラへ無停止刷新が可能。投資保護を最大化。
+          </td>
         </tr>
       </tbody>
     </table>
@@ -893,7 +896,7 @@
       <strong style="color: #0076ce; font-size: 9pt;">【ロールプレイ実施ルール ＆ 対戦形式】</strong><br>
       ・<strong>【提案者】：</strong> 各チームの代表2名<br>
       ・<strong>【お客様役】：</strong> <strong>田中純希 ＆ 石山啓一</strong>（顧客カルテになりきってリアルに応対）<br>
-      ・<strong>【事前の狙い】：</strong> 事前情報を踏まえ、各チームで提案時のゴール（<strong>Next Action</strong>）を明確に定めて挑む。<br>
+      ・<strong>【事前の狙い】：</strong> 事前情報（顧客カルテ）を踏まえ、各チームで提案時のゴール（<strong>Next Action</strong>）を明確に定めて挑む。<br>
       ・<strong>【制限時間】：</strong> <strong>10分／チーム</strong>。短時間でお客様から Next Action への「Yes」を引き出す！<br>
       ・<strong>【雑談タイム（2分間）】：</strong> プレゼン終了後、<strong>会議室からエレベーターに乗るまでの間の時間</strong>を想定した2分間を確保。距離を縮めるトークや追加情報の引き出しに使っても、そのまま見送られて終了でも自由です。
     </div>
@@ -981,7 +984,7 @@
       <tbody>
         <tr><td><strong>情報ポータル活用力</strong><br>(羅針盤/ナレッジ/サポート)</td><td>適切なポータルから正確な公式情報を素早く見つけられるか</td><td>「サポートサイトで特定サービスタグの機器構成や最新管理者ガイドを検索せよ」</td></tr>
         <tr><td><strong>サイジング ＆ 見積力<br>（実践サイジング）</strong></td><td>パラメータ入力から最適モデル・容量削減率を算出できるか</td><td>「VM50台・総容量30TB時、PowerStoreで4:1削減適用時の必要物理容量を算出せよ」</td></tr>
-        <tr><td><strong>製品選定 ＆ 競合対抗<br>（顧客ファースト）</strong></td><td>3大シナリオ（仮想化・社内ファイルサーバー・動画）の最適解を語れるか</td><td>「レンダリングサーバーからの激しいI/Oに耐えるスケールアウトNAS製品とその理由は？」</td></tr>
+        <tr><td><strong>製品選定 ＆ 競合対抗<br>（顧客ファースト）</strong></td><td>3大シナリオ（仮想化・社内ファイル・動画）の最適解を語れるか</td><td>「レンダリングサーバーからの激しいI/Oに耐えるスケールアウトNAS製品とその理由は？」</td></tr>
         <tr><td><strong>データ保護 ＆ セキュリティ<br>ポートフォリオ理解</strong></td><td>イミュータブル保護やバックアップ統合を理解しているか</td><td>「野良NASウィルス事件に対し、Data Domainで実現できる不変保護機能の名称は？」</td></tr>
       </tbody>
     </table>
